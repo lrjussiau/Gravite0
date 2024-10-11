@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 import NavBar from './components/NavBar/NavBar';
 import Logo from './components/Logo/Logo';  
-import MainPage from './components/MainPage/MainPage';
+import MainPage from './pages/MainPage/MainPage';
 
 function App() {
   return (

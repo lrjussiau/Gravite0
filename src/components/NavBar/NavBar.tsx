@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { navItems } from './NavBarItems';
+import { getTranslatedNavItems, navItems } from './NavBarItems'; 
 import { NavContainer, NavList, NavItems, NavItemLink } from './NavBar.styled';
+import { useTranslation } from 'react-i18next';
 
 type NavBarProps = {
   items?: string[];
@@ -10,9 +11,16 @@ const scrollToSection = (sectionId: string) => {
   document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
 };
 
-const NavBar: React.FC<NavBarProps> = ({ items = navItems }) => {
+const NavBar: React.FC<NavBarProps> = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [activeSection, setActiveSection] = useState<string | null>(null);
+  const { i18n } = useTranslation();
+
+  const [translatedNavItems, setTranslatedNavItems] = useState(navItems);
+
+  useEffect(() => {
+    setTranslatedNavItems(getTranslatedNavItems());
+  }, [i18n.language]);
 
   useEffect(() => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
@@ -41,11 +49,8 @@ const NavBar: React.FC<NavBarProps> = ({ items = navItems }) => {
   return (
     <NavContainer isVisible={isVisible}>
       <NavList>
-        {items.map((item, index) => (
-          <NavItems
-            key={index}
-            isActive={activeSection === item.toLowerCase()}
-          >
+        {translatedNavItems.map((item, index) => (
+          <NavItems key={index} isActive={activeSection === item.toLowerCase()}>
             <NavItemLink onClick={() => scrollToSection(item.toLowerCase())}>
               {item}
             </NavItemLink>

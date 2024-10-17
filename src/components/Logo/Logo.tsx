@@ -1,5 +1,5 @@
 import { LogoContainer, LogoImage } from "./Logo.styled";
-import logoImage from '../../assets/media/Logo.png';
+import logoImage from 'assets/medias/Logo.png';
 
 const Logo = () => {
   return (

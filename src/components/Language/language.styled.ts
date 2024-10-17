@@ -3,13 +3,12 @@ import styled from 'styled-components';
 export const LanguageContainer = styled.div`
   display: flex;
   justify-content: center;
-  position: relative;
-  top: 45%;
-  right: 38%;
   gap: 10px;
   padding: 10px;
   border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #fff;
 `;
 
 export const LanguageButton = styled.button<{ isActive: boolean }>`

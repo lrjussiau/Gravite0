@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ButtonContainer = styled.div`
-  z-index: 1000;
+  z-index: 1;
 `;
 
 export const WhatsAppButtonStyled = styled.button`

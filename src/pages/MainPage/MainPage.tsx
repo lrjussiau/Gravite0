@@ -17,7 +17,7 @@ const MainPage: React.FC = () => {
   return (
     <Container>
       {/* Store references to each section */}
-      <Section ref={(el) => el && (sectionsRef.current[0] = el)} id="acceuil" style={{ backgroundColor: '#E57373' }}>
+      <Section ref={(el) => el && (sectionsRef.current[0] = el)} id="acceuil">
         <WelcomePage />
       </Section>
       <Section ref={(el) => el && (sectionsRef.current[1] = el)} id="vol biplace" style={{ backgroundColor: '#64B5F6' }}>

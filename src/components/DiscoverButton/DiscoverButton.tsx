@@ -1,26 +1,29 @@
-import { DiscoverButtonContainer, TextDiscover } from "./DiscoverButton.styled";
-import { useSnapScroll } from "../../utils/useSnapScroll";
+import { DiscoverButtonContainer, TextDiscover, PositionButton } from "./DiscoverButton.styled";
+import { useScrollLock } from "../../utils/useScroll";
+import { useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 
 export const DiscoverButton = () => {
-    const { currentSection } = useSnapScroll();
-    const { t } = useTranslation();
+  const { t } = useTranslation();
+  const { currentSection, setCurrentSection } = useScrollLock(1000);
+  const sectionsRef = useRef<HTMLElement[]>([]);
 
-    const scrollToSection = (sectionIndex: number) => {
-      const section = document.getElementById(`section-${sectionIndex}`);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    };
-  
-    const handleClick = () => {
-      const nextSection = currentSection + 1;
-      scrollToSection(nextSection);
-    };
+  useEffect(() => {
+    sectionsRef.current = Array.from(document.querySelectorAll('section'));
+  }, []);
 
-    return (
-        <DiscoverButtonContainer onClick={handleClick}>
-            <TextDiscover>{t('welcome.decouvrir')}</TextDiscover>
-        </DiscoverButtonContainer>
-    );
+  const handleClick = () => {
+    const totalSections = sectionsRef.current.length;
+    const nextSection = (currentSection + 1) % totalSections;
+    
+    sectionsRef.current[nextSection]?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+    };
+  return (
+      <DiscoverButtonContainer onClick={handleClick}>
+          <TextDiscover>{t('welcome.decouvrir')}</TextDiscover>
+      </DiscoverButtonContainer>
+  );
 }

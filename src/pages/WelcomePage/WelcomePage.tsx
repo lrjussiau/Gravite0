@@ -1,11 +1,19 @@
 import LanguageSelector from "../../components/Language/Language";
-import { WelcomePageContainer } from "./welcomePage.styled";
+import { WelcomePageContainer , ImageBackground, ButtonContainer } from "./welcomePage.styled";
+import ScrollDownButton from "components/ScrollDownButton/ScrollDownButton";
+import { DiscoverButton } from "components/DiscoverButton/DiscoverButton";
+import WhatsAppButton from "components/WhatsApp/WhatsApp";
+import backGround from "assets/medias/header_welcome.jpg";
 
 export const WelcomePage = () => {
   return (
     <WelcomePageContainer>
-      <LanguageSelector />
-      <h1>Welcome Page!</h1>
+      <ImageBackground src={backGround} alt="background" />
+      <ButtonContainer>
+        <LanguageSelector />
+        <DiscoverButton />
+        <WhatsAppButton />
+      </ButtonContainer>
     </WelcomePageContainer>
   );
 }

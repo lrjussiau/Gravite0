@@ -32,3 +32,7 @@ export const TextDiscover = styled.p`
     padding: 0;
 `;
 
+export const PositionButton = styled.div`
+    position: relative; 
+`;
+

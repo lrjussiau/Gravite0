@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const useScrollLock = (delay: number = 1000) => {
+export const useScrollLock = (delay: number = 0) => {
   const [canScroll, setCanScroll] = useState(true);
   const [currentSection, setCurrentSection] = useState(0);
 

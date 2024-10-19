@@ -13,37 +13,39 @@ import { WhoWeAreContainer,
 import NicolasPicture from "assets/medias/Nicolas.jpg";
 import YaelPicture from "assets/medias/yael.jpg";
 import SoleilPicture from "assets/medias/soleil.jpg";
+import { useTranslation } from "react-i18next";
 
 export const WhoAreWePage = () => {
+  const { t } = useTranslation();
   return (
     <WhoWeAreContainer>
-        <Title>Qui sommes-nous ?</Title>
-        <TextContainer>Notre structure compte 2 instructeurs. Sébastien Bruchez (dit soleil) et moi, Nicolas Terrettaz. Mais ce n'est pas tout, nous avons encore UNE instructeur, Yael Margelisch. Toute cette joyeuse équipe est la pour faire de votre rêve VOLER une réalité.</TextContainer>
+        <Title>{t('who_are_we.title')}</Title>
+        <TextContainer>{t('who_are_we.description')}</TextContainer>
         <FaceContainer>
             <TeamContainer>
                 <ImageFace src={NicolasPicture} alt="Nicolas's Picture"></ImageFace>
                 <MemberTextContainer>
-                <NameText>Nicolas Terrettaz</NameText>
+                <NameText>{t('who_are_we.nicolas.name')}</NameText>
                     <ListContainer>
-                        <ListItem>Instructeur de parapente OFAC</ListItem>
-                        <ListItem>Pilote parapente biplace professionnel</ListItem>
-                        <ListItem>Plieur de parachutes de secours pour parapente</ListItem>
-                        <ListItem>Instructeur suisse de ski, ISSA</ListItem>
-                        <ListItem>Instructeur suisse de télémark, ISSA</ListItem>
-                        <ListItem>Ebéniste de formation</ListItem>
+                        <ListItem>{t('who_are_we.nicolas.comp1')}</ListItem>
+                        <ListItem>{t('who_are_we.nicolas.comp2')}</ListItem>
+                        <ListItem>{t('who_are_we.nicolas.comp3')}</ListItem>
+                        <ListItem>{t('who_are_we.nicolas.comp4')}</ListItem>
+                        <ListItem>{t('who_are_we.nicolas.comp5')}</ListItem>
+                        <ListItem>{t('who_are_we.nicolas.comp6')}</ListItem>
                     </ListContainer>
                 </MemberTextContainer>
             </TeamContainer>
             <Line />
             <TeamContainer style={{justifyContent: 'flex-end'}}>
                 <MemberTextContainer>
-                <NameText>Sébastien Bruchez</NameText>
+                <NameText>{t('who_are_we.sebastien.name')}</NameText>
                     <ListContainer>
-                        <ListItem>Instructeur de parapente</ListItem>
-                        <ListItem>Pilote parapente biplace professionnel</ListItem>
-                        <ListItem>Plieur de parachutes de secours pour parapente</ListItem>
-                        <ListItem>Instructeur de speedfliying</ListItem>
-                        <ListItem>Poly-mécanicien de formation</ListItem>
+                        <ListItem>{t('who_are_we.sebastien.comp1')}</ListItem>
+                        <ListItem>{t('who_are_we.sebastien.comp2')}</ListItem>
+                        <ListItem>{t('who_are_we.sebastien.comp3')}</ListItem>
+                        <ListItem>{t('who_are_we.sebastien.comp4')}</ListItem>
+                        <ListItem>{t('who_are_we.sebastien.comp5')}</ListItem>
                     </ListContainer>
                 </MemberTextContainer>
                 <ImageFace src={SoleilPicture} alt="Soleil's Picture"></ImageFace>
@@ -52,12 +54,12 @@ export const WhoAreWePage = () => {
             <TeamContainer>
                 <ImageFace src={YaelPicture} alt="Yael's Picture"></ImageFace>
                 <MemberTextContainer>
-                    <NameText>Yael Margelisch</NameText>
+                    <NameText>{t('who_are_we.yael.name')}</NameText>
                     <ListContainer>
-                        <ListItem>Pilote parapente biplace professionnel</ListItem>
-                        <ListItem>Plieur de parachutes de secours pour parapente</ListItem>
-                        <ListItem>Instructeur suisse de ski ISSA</ListItem>
-                        <ListItem>Instructeur parapente OFAC</ListItem>
+                        <ListItem>{t('who_are_we.yael.comp1')}</ListItem>
+                        <ListItem>{t('who_are_we.yael.comp2')}</ListItem>
+                        <ListItem>{t('who_are_we.yael.comp3')}</ListItem>
+                        <ListItem>{t('who_are_we.yael.comp4')}</ListItem>
                     </ListContainer>
                 </MemberTextContainer>
             </TeamContainer>

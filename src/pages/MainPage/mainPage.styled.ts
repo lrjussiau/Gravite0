@@ -9,6 +9,7 @@ export const Section = styled.section`
   box-sizing: border-box;
   width: 100%;
   background-color: #F5F5F5;
+  z-index: -2;
 `;
 
 // Container to hold all sections

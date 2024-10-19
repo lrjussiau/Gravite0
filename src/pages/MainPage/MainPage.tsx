@@ -1,18 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Container, Section } from './mainPage.styled';
-import { useScrollLock } from '../../utils/useScroll';
 import { WelcomePage } from '../WelcomePage/WelcomePage';
+import { TamdemPage } from 'pages/TamdemPage/TamdemPage';
 
 const MainPage: React.FC = () => {
   const sectionsRef = useRef<HTMLElement[]>([]);
-  const { canScroll, setCurrentSection, currentSection } = useScrollLock(1000);
-
-  useEffect(() => {
-    sectionsRef.current[currentSection]?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  }, [currentSection]);
 
   return (
     <Container>
@@ -20,8 +12,8 @@ const MainPage: React.FC = () => {
       <Section ref={(el) => el && (sectionsRef.current[0] = el)} id="acceuil">
         <WelcomePage />
       </Section>
-      <Section ref={(el) => el && (sectionsRef.current[1] = el)} id="vol biplace" style={{ backgroundColor: '#64B5F6' }}>
-        <h1>Vol Biplace</h1>
+      <Section ref={(el) => el && (sectionsRef.current[1] = el)} id="vol biplace">
+        <TamdemPage />
       </Section>
       <Section ref={(el) => el && (sectionsRef.current[2] = el)} id="qui sommes-nous ?" style={{ backgroundColor: '#81C784' }}>
         <h1>Qui sommes-nous ?</h1>

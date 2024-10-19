@@ -48,8 +48,11 @@ export const NavItems = styled.li<{ isActive: boolean }>`
 `;
 
 export const NavItemLink = styled.a`
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: inherit;
   width: 100%;
+  height: 100%;
 `;
 

@@ -50,9 +50,9 @@ const NavBar: React.FC<NavBarProps> = () => {
     <NavContainer isVisible={isVisible}>
       <NavList>
         {translatedNavItems.map((item, index) => (
-          <NavItems key={index} isActive={activeSection === item.toLowerCase()}>
-            <NavItemLink onClick={() => scrollToSection(item.toLowerCase())}>
-              {item}
+          <NavItems key={index} isActive={activeSection === item.id}>
+            <NavItemLink onClick={() => scrollToSection(item.id)}>
+              {item.label}
             </NavItemLink>
           </NavItems>
         ))}

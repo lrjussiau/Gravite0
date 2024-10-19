@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { BoxContainer, ButtonContainer, Button, PhotoBox, ContactButton, TextPhoto, TextPrice } from './boxChoixeFlight.styled';
 import PhotoBiplace from 'assets/medias/para_biplace.jpeg';
 import PhotoExtreme from 'assets/medias/para_extreme.jpg';
+import { useTranslation } from "react-i18next";
 
 type TabType = 'Biplace' | 'Extreme';
 
 export const BoxChoiceFlight = () => {
     const [activeTab, setActiveTab] = useState<TabType>('Biplace');
     const [isVisible, setIsVisible] = useState(false);
+    const { t } = useTranslation();
 
     const handleClick = (tab: TabType) => {
         setIsVisible(false);
@@ -24,27 +26,27 @@ export const BoxChoiceFlight = () => {
     return (
         <BoxContainer>
             <ButtonContainer>
-                <Button onClick={() => handleClick('Biplace')} active={activeTab === 'Biplace'}>Biplace</Button>
-                <Button onClick={() => handleClick('Extreme')} active={activeTab === 'Extreme'}>Extreme</Button>
+                <Button onClick={() => handleClick('Biplace')} active={activeTab === 'Biplace'}>{t('tamdem.biplace')}</Button>
+                <Button onClick={() => handleClick('Extreme')} active={activeTab === 'Extreme'}>{t('tamdem.extreme')}</Button>
             </ButtonContainer>
             {activeTab === 'Biplace' && (
                 <>
                     <PhotoBox src={PhotoBiplace} alt='Biplace Picture' className={isVisible ? 'visible' : ''} />
-                    <TextPrice className={isVisible ? 'visible' : ''}>20-25 minutes de vol</TextPrice>
-                    <TextPrice className={isVisible ? 'visible' : ''}>190 CHF par personne</TextPrice>
-                    <TextPrice className={isVisible ? 'visible' : ''}>Durée de l'activité environ 1h30</TextPrice>
+                    <TextPrice className={isVisible ? 'visible' : ''}>{t('tamdem.time_biplace')}</TextPrice>
+                    <TextPrice className={isVisible ? 'visible' : ''}>{t('tamdem.price_biplace')}</TextPrice>
+                    <TextPrice className={isVisible ? 'visible' : ''}>{t('tamdem.duration_biplace')}</TextPrice>
                 </>
             )}
             {activeTab === 'Extreme' && (
                 <>
                     <PhotoBox src={PhotoExtreme} alt='Extreme Picture' className={isVisible ? 'visible' : ''} />
-                    <TextPrice className={isVisible ? 'visible' : ''}>40-45 minutes de vol</TextPrice>
-                    <TextPrice className={isVisible ? 'visible' : ''}>250 CHF par personne</TextPrice>
-                    <TextPrice className={isVisible ? 'visible' : ''}>Durée de l'activité environ 2h</TextPrice>
+                    <TextPrice className={isVisible ? 'visible' : ''}>{t('tamdem.time_extreme')}</TextPrice>
+                    <TextPrice className={isVisible ? 'visible' : ''}>{t('tamdem.price_extreme')}</TextPrice>
+                    <TextPrice className={isVisible ? 'visible' : ''}>{t('tamdem.duration_extreme')}</TextPrice>
                 </>
             )}
-            <TextPhoto>Sur demande, le pilote se chargera de faire quelques photos et vidéos.</TextPhoto>
-            <ContactButton>Nous contacter</ContactButton>
+            <TextPhoto>{t('tamdem.description_box')}</TextPhoto>
+            <ContactButton>{t('tamdem.nous_contacter')}</ContactButton>
         </BoxContainer>
     );
 };

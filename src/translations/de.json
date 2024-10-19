@@ -1,12 +1,54 @@
 {
-    "nav": {
-      "acceuil": "Startseite",
-      "vol_biplace": "Tandemflug",
-      "qui_sommes_nous": "Wer sind wir?",
-      "contact": "Kontakt"
+  "nav": {
+    "acceuil": "Startseite",
+    "vol_biplace": "Tandemflug",
+    "formation": "Ausbildung",
+    "qui_sommes_nous": "Wer sind wir?",
+    "contact": "Kontakt"
+  },
+  "welcome": {
+    "reserver_votre_vol": "Buchen Sie Ihren Flug"
+  },
+  "tamdem": {
+    "title": "Fliegen, ein Traum!",
+    "description": "Jeder hat schon einmal in den Himmel geschaut und den Wunsch verspürt zu fliegen… Mit uns ist das möglich! An jedem Tag des Jahres machen professionelle Piloten Ihren Traum wahr. Die Flüge finden von den Ruinettes oder Croix de Cœur statt. Nach 20 bis 25 Minuten eines unvergesslichen Fluges wird Ihr Pilot Sie in Le Châble landen, und Sie werden den Himmel nie wieder auf dieselbe Weise betrachten.",
+    "biplace": "Tandem", 
+    "extreme": "Extrem",
+    "time_biplace": "20-25 Minuten Flugzeit",
+    "time_extreme": "40-45 Minuten Flugzeit",
+    "price_biplace": "190 CHF pro Person",
+    "price_extreme": "250 CHF pro Person",
+    "duration_biplace": "Dauer der Aktivität ca. 1h30",
+    "duration_extreme": "Dauer der Aktivität ca. 2h00",
+    "description_box": "Auf Wunsch macht der Pilot einige Fotos und Videos.",
+    "nous_contacter": "Kontaktieren Sie uns"
+  },
+  "who_are_we": {
+    "title": "Wer sind wir?",
+    "description": "Unser Team besteht aus 2 Ausbildern, Sébastien Bruchez (alias 'Sonne') und mir, Nicolas Terrettaz. Aber das ist noch nicht alles, wir haben noch EINEN weiteren Ausbilder, Yael Margelisch. Dieses fröhliche Team ist hier, um Ihren Traum vom FLIEGEN Wirklichkeit werden zu lassen.",
+    "nicolas": {
+      "name": "Nicolas Terrettaz",
+      "comp1": "Zertifizierter Gleitschirmlehrer (OFAC)",
+      "comp2": "Professioneller Tandem-Gleitschirmpilot",
+      "comp3": "Fallschirm-Packer für Gleitschirmfliegen",
+      "comp4": "Schweizer Skilehrer, ISSA",
+      "comp5": "Schweizer Telemarklehrer, ISSA",
+      "comp6": "Gelernter Schreiner"
     },
-    "welcome": {
-        "decouvrir": "Entdecken"
+    "sebastien": {
+      "name": "Sebastien Bruchez",
+      "comp1": "Gleitschirmlehrer",
+      "comp2": "Professioneller Tandem-Gleitschirmpilot",
+      "comp3": "Fallschirm-Packer für Gleitschirmfliegen",
+      "comp4": "Speedflying-Lehrer",
+      "comp5": "Gelernter Polymechaniker"
+    },
+    "yael": {
+      "name": "Yael Margelisch",
+      "comp1": "Professioneller Tandem-Gleitschirmpilot",
+      "comp2": "Fallschirm-Packer für Gleitschirmfliegen",
+      "comp3": "Schweizer Skilehrer, ISSA",
+      "comp4": "Zertifizierter Gleitschirmlehrer (OFAC)"
     }
   }
-  
+}

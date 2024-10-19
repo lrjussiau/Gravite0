@@ -27,7 +27,7 @@ export const NavList = styled.ul`
   align-items: center;
   margin: 0px;
   padding: 0px;
-  width: 45%;
+  width: 60%;
 `;
 
 // NavBar List Items

@@ -29,7 +29,7 @@ export const DiscoverButton = () => {
 
   return (
     <DiscoverButtonContainer onClick={handleClick}>
-      <TextDiscover>{t('welcome.decouvrir')}</TextDiscover>
+      <TextDiscover>{t('welcome.reserver_votre_vol')}</TextDiscover>
     </DiscoverButtonContainer>
   );
 };

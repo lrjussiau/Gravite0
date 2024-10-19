@@ -1,12 +1,54 @@
 {
-    "nav": {
-      "acceuil": "Home",
-      "vol_biplace": "Tandem Flight",
-      "qui_sommes_nous": "Who Are We?",
-      "contact": "Contact"
+  "nav": {
+    "acceuil": "Home",
+    "vol_biplace": "Tandem Flight",
+    "formation": "Training",
+    "qui_sommes_nous": "Who Are We?",
+    "contact": "Contact"
+  },
+  "welcome": {
+    "reserver_votre_vol": "Book Your Flight"
+  },
+  "tamdem": {
+    "title": "Flying, a dream!",
+    "description": "Everyone has looked at the sky with the desire to fly… With us, it's possible! Every day of the year, professional pilots make your dream come true. Flights take place from Ruinettes or Croix de Cœur. After 20 to 25 minutes of an unforgettable flight, your pilot will land you at Châble, and you’ll never look at the sky the same way again.",
+    "biplace": "Tandem", 
+    "extreme": "Extreme",
+    "time_biplace": "20-25 minutes of flight",
+    "time_extreme": "40-45 minutes of flight",
+    "price_biplace": "190 CHF per person",
+    "price_extreme": "250 CHF per person",
+    "duration_biplace": "Activity duration about 1h30",
+    "duration_extreme": "Activity duration about 2h00",
+    "description_box": "On request, the pilot will take some photos and videos.",
+    "nous_contacter": "Contact Us"
+  },
+  "who_are_we": {
+    "title": "Who Are We?",
+    "description": "Our team consists of 2 instructors, Sébastien Bruchez (aka 'Sun') and me, Nicolas Terrettaz. But that's not all, we also have ONE more instructor, Yael Margelisch. This joyful team is here to make your dream of FLYING a reality.",
+    "nicolas": {
+      "name": "Nicolas Terrettaz",
+      "comp1": "Certified Paragliding Instructor (OFAC)",
+      "comp2": "Professional Tandem Paragliding Pilot",
+      "comp3": "Parachute Packer for Paragliding",
+      "comp4": "Swiss Ski Instructor, ISSA",
+      "comp5": "Swiss Telemark Instructor, ISSA",
+      "comp6": "Trained Cabinetmaker"
     },
-    "welcome": {
-        "decouvrir": "Discover"
+    "sebastien": {
+      "name": "Sebastien Bruchez",
+      "comp1": "Paragliding Instructor",
+      "comp2": "Professional Tandem Paragliding Pilot",
+      "comp3": "Parachute Packer for Paragliding",
+      "comp4": "Speedflying Instructor",
+      "comp5": "Trained Polymechanic"
+    },
+    "yael": {
+      "name": "Yael Margelisch",
+      "comp1": "Professional Tandem Paragliding Pilot",
+      "comp2": "Parachute Packer for Paragliding",
+      "comp3": "Swiss Ski Instructor, ISSA",
+      "comp4": "Certified Paragliding Instructor (OFAC)"
     }
   }
-  
+}

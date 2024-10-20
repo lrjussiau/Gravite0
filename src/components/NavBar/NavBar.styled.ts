@@ -16,6 +16,8 @@ export const NavContainer = styled.div<{ isVisible: boolean }>`
   transition: transform 0.3s ease-in-out;
   transform: ${({ isVisible }) => (isVisible ? 'translateY(0)' : 'translateY(-100%)')};
   z-index: 10;
+  border: 1px solid #56A9FF;
+  border-top: none;
 `;
 
 // NavBar List Container

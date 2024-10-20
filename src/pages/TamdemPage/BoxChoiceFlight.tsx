@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef } from 'react';
 import { BoxContainer, ButtonContainer, Button, PhotoBox, ContactButton, TextPhoto, TextPrice } from './boxChoixeFlight.styled';
 import PhotoBiplace from 'assets/medias/para_biplace.jpeg';
 import PhotoExtreme from 'assets/medias/para_extreme.jpg';
@@ -10,6 +10,8 @@ export const BoxChoiceFlight = () => {
     const [activeTab, setActiveTab] = useState<TabType>('Biplace');
     const [isVisible, setIsVisible] = useState(false);
     const { t } = useTranslation();
+    const sectionsRef = useRef<HTMLElement[]>([]);
+
 
     const handleClick = (tab: TabType) => {
         setIsVisible(false);
@@ -22,6 +24,19 @@ export const BoxChoiceFlight = () => {
     useEffect(() => {
         setIsVisible(true);
     }, []);
+
+    useEffect(() => {
+      sectionsRef.current = Array.from(document.querySelectorAll('section'));
+    }, []);
+
+    const GoContact = () => {
+        const lastSection = sectionsRef.current.length;
+
+        sectionsRef.current[lastSection - 1]?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        });
+    };
 
     return (
         <BoxContainer>
@@ -46,7 +61,7 @@ export const BoxChoiceFlight = () => {
                 </>
             )}
             <TextPhoto>{t('tamdem.description_box')}</TextPhoto>
-            <ContactButton>{t('tamdem.nous_contacter')}</ContactButton>
+            <ContactButton onClick={() => GoContact()}>{t('tamdem.nous_contacter')}</ContactButton>
         </BoxContainer>
     );
 };

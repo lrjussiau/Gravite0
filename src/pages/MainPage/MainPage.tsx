@@ -3,6 +3,7 @@ import { Container, Section } from './mainPage.styled';
 import { WelcomePage } from '../WelcomePage/WelcomePage';
 import { TamdemPage } from 'pages/TamdemPage/TamdemPage';
 import { WhoAreWePage } from 'pages/WhoAreWePage/WhoAreWePage';
+import { FormationPage } from 'pages/Formation/FormationPage';
 
 const MainPage: React.FC = () => {
   const sectionsRef = useRef<HTMLElement[]>([]);
@@ -17,7 +18,7 @@ const MainPage: React.FC = () => {
         <TamdemPage />
       </Section>
       <Section ref={(el) => el && (sectionsRef.current[2] = el)} id="formation">
-        <h1>Formation</h1>
+        <FormationPage />
       </Section>
       <Section ref={(el) => el && (sectionsRef.current[3] = el)} id="qui sommes-nous ?">
         <WhoAreWePage />

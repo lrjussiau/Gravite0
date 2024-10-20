@@ -8,7 +8,7 @@ export const TamdemPageContainer = styled.div`
     justify-content: center;
     height: 100vh;
     width: 100%;
-    background-color: #E0E0E0;
+    background-color: #F5F5F5;
 `;
 
 export const Content = styled.div`

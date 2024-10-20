@@ -7,6 +7,7 @@ export const WhoWeAreContainer = styled.div`
     justify-content: center;
     height: 100vh;
     width: 100%;
+    background-color: #F5F5F5;
 `;
 
 export const Title = styled.h1`
@@ -22,6 +23,7 @@ export const TextContainer = styled.div`
     gap: 3%;
     width: 70%;
     margin-bottom: 2%;
+    color: #333;
 `;
 
 export const FaceContainer = styled.div`
@@ -37,7 +39,7 @@ export const TeamContainer = styled.div`
     justify-content: flex-start;
     gap: 5%;
     width: 100%;
-    margin-top: 2%;
+    margin-top: 1%;
 `;
 
 export const MemberTextContainer = styled.div`
@@ -48,7 +50,7 @@ export const MemberTextContainer = styled.div`
 `;
 
 export const ImageFace = styled.img`
-    width: 10vw;
+    width: 8vw;
     aspect-ratio: 1/1;
     object-fit: cover;
     border: 2px solid #56A9FF;
@@ -57,7 +59,7 @@ export const ImageFace = styled.img`
 `;
 
 export const NameText = styled.h2`
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     color: #56A9FF;
     font-weight: 500;
     margin: 0;
@@ -81,7 +83,7 @@ export const ListItem = styled.li`
 export const Line = styled.hr`
     width: 100%;
     border: 1px solid #333;
-    margin: 1% 0;
+    margin: 0.5% 0;
     opacity: 0.1;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 `;

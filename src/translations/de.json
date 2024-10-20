@@ -50,5 +50,34 @@
       "comp3": "Schweizer Skilehrer, ISSA",
       "comp4": "Zertifizierter Gleitschirmlehrer (OFAC)"
     }
+  },
+  "formation": {
+    "title": "Möchtest du alleine fliegen?",
+    "description": "Vom ersten Flug bis zur Lizenz wirst du von einem Team von Profis betreut. In einer entspannten Atmosphäre erhältst du eine Ausbildung, die an dein Niveau angepasst ist, sodass du sicher Fortschritte machen kannst! Pauschale für die gesamte Ausbildung (Stufe 1 + Stufe 2): 2300 CHF",
+    "stage1": {
+      "title": "Stufe 1",
+      "text1": "Hangschule (2 halbe Tage)",
+      "text2": "Pädagogischer Tandemflug",
+      "text3": "Theorie vor dem ersten Alleinflug",
+      "text4": "Erster Alleinflug",
+      "price": "Preis: 490 CHF",
+      "material": "Flugausrüstung und Transport inbegriffen"
+    },
+    "stage2": {
+      "title": "Stufe 2",
+      "text1": "Unbegrenzte funkgesteuerte Flüge bis zur Lizenz, die innerhalb von 18 Monaten nach Beginn der Ausbildung durchgeführt werden müssen. (mindestens 50 Flüge)",
+      "text2": "Wenn du deine gesamte Ausbildung nicht bei uns absolvierst, ist das kein Problem. Es ist auch möglich, einige Trainingsflüge bei uns zu machen. Der Preis für das Coaching beträgt 30 CHF pro Flug. Die Kosten für die Ausrüstung betragen 30 CHF pro Flug.",
+      "price": "Preis: 2000 CHF",
+      "material": "Flugausrüstung in den ersten 15 Flügen inbegriffen."
+    },
+    "link": {
+      "title": "Nützliche Links",
+      "link1": "Meteo Schweiz",
+      "link2": "Meteo RTS",
+      "link3": "Gleitschirmwetter",
+      "link4": "Paradelta Club",
+      "link5": "Schweizer Hängegleiterverband",
+      "link6": "Verbier Infos"
+    }
   }
 }

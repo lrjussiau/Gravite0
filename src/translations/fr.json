@@ -50,6 +50,34 @@
             "comp3": "Instructeur suisse de ski ISSA",
             "comp4": "Instructeur parapente OFAC"
         }
+    },
+    "formation": {
+        "title": "Tu veux voler seul ?",
+        "description": "Du premier vol à la licence, tu seras encadré par une équipe de professionnels. Dans une ambiance décontractée, tu pourras bénéficier d'un enseignement adapté à ton niveau pour progresser en toute sécurité! Forfait pour toute la formation (stage1 + stage2): 2300.- CHF",
+        "stage1": {
+            "title": "Stage 1",
+            "text1": "Pente école (2 demi-journées)",
+            "text2": "Vol biplace pédagogique",
+            "text3": "Théorie avant le 1er vol solo",
+            "text4": "1er vol solo",
+            "price": "Prix: 490.- CHF",
+            "material": "Matériel de vol et transport compris"
+        },
+        "stage2": {
+            "title": "Stage 2",
+            "text1": "Vols radio-guidés illimités jusqu'à la licence, à effectuer en 18 mois depuis le début de la formation. (au minimum 50 vols)",
+            "text2": "Si tu n'effectues pas ta formation entière avec nous, ce n'est pas un problème. Il est aussi possible de venir faire quelques vols de formation chez nous. Le prix du coaching est de 30.- par vol. Le prix du matériel est 30.- par vol.",
+            "price": "Prix: 2000.- CHF",
+            "material": "Matériel de vol compris pour les 15 premiers vols."
+        },
+        "link": {
+            "title": "Liens Utiles",
+            "link1": "Meteo Suisse",
+            "link2": "Meteo RTS",
+            "link3": "Meteo Parapente",
+            "link4": "Paradelta Club",
+            "link5": "Association Suisse des deltaplanes",
+            "link6": "Infos verbier"
+        }
     }
-  }
-  
+}

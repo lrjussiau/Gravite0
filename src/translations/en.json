@@ -50,5 +50,35 @@
       "comp3": "Swiss Ski Instructor, ISSA",
       "comp4": "Certified Paragliding Instructor (OFAC)"
     }
+  },
+  "formation": {
+    "title": "Want to fly solo?",
+    "description": "From your first flight to your license, you'll be guided by a team of professionals. In a relaxed atmosphere, you will receive training tailored to your level so you can progress safely! Package for the entire course (stage1 + stage2): 2300 CHF",
+    "stage1": {
+      "title": "Stage 1",
+      "text1": "Slope school (2 half-days)",
+      "text2": "Educational tandem flight",
+      "text3": "Theory before the first solo flight",
+      "text4": "First solo flight",
+      "price": "Price: 490 CHF",
+      "material": "Flight equipment and transport included"
+    },
+    "stage2": {
+      "title": "Stage 2",
+      "text1": "Unlimited radio-guided flights until the license, to be completed within 18 months from the start of training. (at least 50 flights)",
+      "text2": "If you don’t complete your entire training with us, that’s not a problem. It is also possible to come and do a few training flights with us. The coaching price is 30 CHF per flight. The equipment cost is 30 CHF per flight.",
+      "price": "Price: 2000 CHF",
+      "material": "Flight equipment included for the first 15 flights."
+    },
+    "link": {
+      "title": "Useful Links",
+      "link1": "Meteo Suisse",
+      "link2": "Meteo RTS",
+      "link3": "Paragliding Weather",
+      "link4": "Paradelta Club",
+      "link5": "Swiss Hang Gliding Association",
+      "link6": "Verbier Info"
+    }
   }
 }
+    

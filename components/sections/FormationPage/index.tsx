@@ -1,9 +1,8 @@
 import { useTranslation } from "react-i18next";
-import { Title, SubTitle, Text } from 'components/shared/Typography';
+import { Title } from 'components/shared/Typography';
 import { PageContainer, ContentContainer } from 'components/shared/Container';
 import { Carousel } from 'components/Carousel';
 import { ImageContainer, ColorBox, BoxText, VerticalText } from "./FormationPage.styled";
-import { VerticalLine, HorizontalLine } from "components/shared/Line/Line.styled";
 import Image from 'next/image';
 import { colors } from "styles/color";
 import { ResponsiveText } from "components/shared/ResponsiveText";

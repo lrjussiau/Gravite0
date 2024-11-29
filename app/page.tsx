@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import MainPage from 'pages/MainPage/MainPage';
+import MainPage from 'components/sections/MainPage';
 
 function App() {
   return <MainPage />;

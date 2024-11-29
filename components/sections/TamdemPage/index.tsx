@@ -1,6 +1,6 @@
 import { ImageContainer, ImageBackground, TopTitleContainer, BottomTextContainer, BoxContainerWrapper, HoverTitle, ContactButton} from "./tamdemPage.styled";
 import { useTranslation } from "react-i18next";
-import ScrollDownButton from "../../components/ScrollDownButton";
+import ScrollDownButton from "components/ScrollDownButton";
 import Image from 'next/image';
 import { Title, SubTitle, Text } from 'components/shared/Typography';
 import { PageContainer, ContentContainer, BoxContainer } from 'components/shared/Container';
@@ -19,7 +19,7 @@ export const TamdemPage = () => {
   };
 
   const slides = [
-    <BoxContainer $width={{desktop:'100%', mobile:'80%'}} $backgroundColor="transparent" $shadow>
+    <BoxContainer key="flight1" $width={{desktop:'100%', mobile:'80%'}} $backgroundColor="transparent" $shadow>
         <BoxContainerWrapper>
             <ImageBackground>
                 <Image
@@ -46,7 +46,7 @@ export const TamdemPage = () => {
             </BottomTextContainer>
         </BoxContainerWrapper>
     </BoxContainer>,
-    <BoxContainer $width={{desktop:'100%', mobile:'80%'}} $backgroundColor="transparent" $shadow>
+    <BoxContainer key="flight2" $width={{desktop:'100%', mobile:'80%'}} $backgroundColor="transparent" $shadow>
         <BoxContainerWrapper>
             <ImageBackground>
                 <Image

@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { ContainerProps, BoxProps } from './types';
 import { BREAKPOINTS } from 'utils/DeviceDetect';
 import { DEFAULT_CONTAINER_VALUES } from './constants';
-import { get } from 'http';
-
 
 interface ResponsiveValue {
   default: string;

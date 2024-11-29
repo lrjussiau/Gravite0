@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import { MapWrapper, GradientBottom, GradientLeft, GradientTop, GradientRight } from './contactMap.styled';
-import { colors } from 'styles/color';
-import { MapPin } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
+import { Icon } from 'leaflet';
 
 // Imports dynamiques pour tous les composants leaflet
 const MapContainer = dynamic(
@@ -30,7 +29,7 @@ interface ContactMapProps {
 
 const ContactMap: React.FC<ContactMapProps> = ({ position, zoom }) => {
   const [isClient, setIsClient] = useState(false);
-  const [markerIcon, setMarkerIcon] = useState<any>(null);
+  const [markerIcon, setMarkerIcon] = useState<Icon | null>(null);
 
   useEffect(() => {
     // Import Leaflet uniquement côté client

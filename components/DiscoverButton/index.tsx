@@ -1,4 +1,4 @@
-import { DiscoverButtonContainer, TextDiscover } from "./DiscoverButton.styled";
+import { DiscoverButtonContainer } from "./DiscoverButton.styled";
 import { useEffect, useRef } from "react";
 import { useTranslation } from 'react-i18next';
 import { Text } from "components/shared/Typography";

@@ -7,7 +7,6 @@ import useDeviceDetect from 'utils/DeviceDetect';
 
 const NavBar: React.FC = () => {
   const [isMounted, setIsMounted] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState<string | null>(null);
   const { t } = useTranslation();
@@ -68,7 +67,7 @@ const NavBar: React.FC = () => {
   // Rendu initial côté serveur
   if (!isMounted) {
     return (
-      <NavContainer $isVisible={true}>
+      <NavContainer>
         <NavHeader>
           <BurgerButton onClick={() => {}}>
             <Menu size={24} />
@@ -99,7 +98,7 @@ const NavBar: React.FC = () => {
 
   // Rendu côté client
   return (
-    <NavContainer $isVisible={isVisible}>
+    <NavContainer>
       <NavHeader>
         <BurgerButton onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}

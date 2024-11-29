@@ -1,10 +1,10 @@
 import React, { useRef } from 'react';
 import { Container, Section } from './mainPage.styled';
-import { WelcomePage } from '../WelcomePage/WelcomePage';
-import { TamdemPage } from '../TamdemPage/TamdemPage';
-import { WhoAreWePage } from '../WhoAreWePage/WhoAreWePage';
-import { FormationPage } from '../FormationPage/FormationPage';
-import { ContactPage } from '../ContactPage/ContactPage';
+import { WelcomePage } from '../WelcomePage';
+import { TamdemPage } from '../TamdemPage';
+import { WhoAreWePage } from '../WhoAreWePage';
+import { FormationPage } from '../FormationPage';
+import { ContactPage } from '../ContactPage';
 import NavBar from 'components/NavBar';
 import Logo from 'components/Logo';
 

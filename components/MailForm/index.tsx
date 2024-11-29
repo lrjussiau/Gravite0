@@ -1,4 +1,3 @@
-// ContactForm.tsx
 import React, { useState } from 'react';
 import { FormContainer,
             Form,
@@ -46,6 +45,7 @@ const ContactForm = () => {
         setStatus('error');
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       setStatus('error');
     }
   };

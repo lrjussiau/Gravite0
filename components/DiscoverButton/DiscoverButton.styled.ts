@@ -24,14 +24,6 @@ export const DiscoverButtonContainer = styled.div`
     }
 `;
 
-
-export const TextDiscover = styled.p`
-    color: #fff;
-    font-size: 1.8rem;
-    margin: 0;
-    padding: 0;
-`;
-
 export const PositionButton = styled.div`
     position: relative; 
 `;

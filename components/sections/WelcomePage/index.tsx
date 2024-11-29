@@ -1,11 +1,10 @@
 // WelcomePage.tsx
-import LanguageSelector from "../../components/Language";
+import LanguageSelector from "components/Language";
 import { ButtonContainer, VideoBackgroundWrapper } from "./welcomePage.styled";
-import { DiscoverButton } from "../../components/DiscoverButton";
-import WhatsAppButton from "../../components/WhatsApp/WhatsApp";
+import { DiscoverButton } from "components/DiscoverButton";
+import WhatsAppButton from "components/WhatsApp/WhatsApp";
 import { PageContainer } from 'components/shared/Container';
 import { useEffect, useRef } from 'react';
-import { ContentContainer } from 'components/shared/Container';
 
 export const WelcomePage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);

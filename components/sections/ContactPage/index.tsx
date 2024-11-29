@@ -1,8 +1,7 @@
 import { Footer, ItemPlacer, ItemWrapper, IconWrapper, RightContent, ButtonWrapper } from "./ContactPage.styled";
-import ContactMap from "../../components/Map";
-import ContactForm from "../../components/MailForm";
-import { useTranslation } from "react-i18next";
-import { SubTitle, Text } from 'components/shared/Typography';
+import ContactMap from "components/Map";
+import ContactForm from "components/MailForm";
+import { Text } from 'components/shared/Typography';
 import { PageContainer, ContentContainer } from 'components/shared/Container';
 import { colors } from "styles/color";
 import { Mail, Phone, MapPin} from 'lucide-react';
@@ -13,7 +12,6 @@ import { BREAKPOINTS } from "utils/DeviceDetect";
 export const ContactPage = () => {
     const position: [number, number] = [46.079220, 7.215883]; // Coordonnées sous forme de tableau
     const zoom = 13;
-    const { t } = useTranslation();
 
     const [iconSize, setIconSize] = useState(40);
 

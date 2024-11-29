@@ -16,7 +16,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",  // Utilise `baseUrl` pour les chemins absolus
+    "baseUrl": "./",  // Utilise `baseUrl` pour les chemins absolus
     "paths": {
       "@/*": ["./src/*"]  // Ajoute un alias si nécessaire
     },

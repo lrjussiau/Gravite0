@@ -4,7 +4,7 @@ import { BREAKPOINTS } from 'utils/DeviceDetect';
 import { colors } from 'styles/color';
 
 // Base layout
-export const NavContainer = styled.div<{ $isVisible: boolean }>`
+export const NavContainer = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
@@ -21,10 +21,6 @@ export const NavContainer = styled.div<{ $isVisible: boolean }>`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  
-  /* Animation */
-  transition: transform 0.3s ease-in-out;
-  transform: ${({ $isVisible }) => ($isVisible ? 'translateY(0)' : 'translateY(-100%)')};
   
   @media (max-width: ${BREAKPOINTS.tablet}px) {
     padding: 0;

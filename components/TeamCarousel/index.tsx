@@ -16,7 +16,7 @@ import { colors } from 'styles/color';
 interface TeamMember {
   id: number;
   name: string;
-  image: any;
+  image: string;
   description: string[];
 }
 

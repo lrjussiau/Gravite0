@@ -1,0 +1,88 @@
+{
+    "nav": {
+      "acceuil": "Accueil",
+      "vol_biplace": "Vol Biplace",
+      "formation": "Formation",
+      "qui_sommes_nous": "Qui Sommes-nous ?",
+      "contact": "Contact"
+    },
+    "welcome": {
+        "reserver_votre_vol": "Reserver votre vol"
+    },
+    "tamdem": {
+        "title": "Voler, un rêve !",
+        "choice": "Choisis ton vol",
+        "description": {
+            "desktop" : "Tout le monde a déjà regardé le ciel avec l'envie de voler… Avec nous, c'est possible! Tous les jours de l'année, des pilotes professionnels se chargent de faire de ton rêve une réalité. Les vols s'effectuent des Ruinettes ou de la Croix de Cœur. Après 20 à 25 minutes d'un vol inoubliable, ton pilote te déposera au Châble, d'où tu ne regarderas plus jamais le ciel de la même façon.",
+            "mobile" : "Envie de voler ? Avec nous, c'est possible ! Tous les jours, des pilotes pros réalisent ton rêve. Départ des Ruinettes ou de la Croix de Cœur, pour 20-25 minutes de vol inoubliable jusqu'au Châble."
+        },
+        "biplace": "Vol Biplace", 
+        "extreme": "Vol Extrême",
+        "time_biplace": "20-25 min de vol",
+        "time_extreme": "40-45 min de vol",
+        "price_biplace": "190 CHF par personne",
+        "price_extreme": "250 CHF par personne",
+        "duration_biplace": "Durée de l'activité environ 1h30",
+        "duration_extreme": "Durée de l'activité environ 2h00",
+        "description_box": "Sur demande, le pilote se chargera de faire quelques photos et vidéos.",
+        "nous_contacter": "Reserve ta place"
+    },
+    "who_are_we": {
+        "title": "Qui sommes-nous ?",
+        "description": "Notre structure compte 2 instructeurs. Sébastien Bruchez (dit soleil) et moi, Nicolas Terrettaz. Mais ce n'est pas tout, nous avons encore UNE instructeur, Yael Margelisch. Toute cette joyeuse équipe est la pour faire de votre rêve VOLER une réalité.",
+        "nicolas": {
+            "name": "Nicolas Terrettaz",
+            "comp1": "Instructeur de parapente OFAC",
+            "comp2": "Pilote parapente biplace professionnel",
+            "comp3": "Plieur de parachutes de secours pour parapente",
+            "comp4": "Instructeur suisse de ski, ISSA",
+            "comp5": "Instructeur suisse de télémark, ISSA",
+            "comp6": "Ebéniste de formation"
+        },
+        "sebastien": {
+            "name": "Sebastien Bruchez",
+            "comp1": "Instructeur de parapente",
+            "comp2": "Pilote parapente biplace professionnel",
+            "comp3": "Plieur de parachutes de secours pour parapente",
+            "comp4": "Instructeur de speedfliying",
+            "comp5": "Poly-mécanicien de formation"
+        },
+        "yael": {
+            "name": "Yael Margelisch",
+            "comp1": "Pilote parapente biplace professionnel",
+            "comp2": "Plieur de parachutes de secours pour parapente",
+            "comp3": "Instructeur suisse de ski ISSA",
+            "comp4": "Instructeur parapente OFAC"
+        }
+    },
+    "formation": {
+        "title": "Tu veux voler seul ?",
+        "description": {
+            "desktop": "Du premier vol à la licence, tu seras encadré par une équipe de professionnels. Dans une ambiance décontractée, tu pourras bénéficier d'un enseignement adapté à ton niveau pour progresser en toute sécurité! Forfait pour toute la formation (stage1 + stage2): 2300.- CHF",
+            "mobile": "Du premier vol à la licence, encadré par des pros dans une ambiance cool. Formation complète (stage1 + stage2): 2300.- CHF"
+        },        
+        "stage1": {
+            "title": "Stage 1",
+            "desktop": "Ce stage te permet de découvrir les bases du parapente. Il inclut deux demi-journées en pente école, un vol biplace pédagogique pour une première expérience en vol, une session théorique avant ton premier vol solo, et enfin, ton tout premier vol en autonomie ! Le matériel de vol et les transports sont compris dans le prix de 490 CHF.",
+            "mobile": "Découvre les bases du parapente : 2 sessions en pente école, 1 vol biplace, théorie et ton 1er vol solo ! Matériel et transport inclus. 490 CHF."
+        },
+        "stage2": {
+            "title": "Stage 2",
+            "desktop": "Avec ce stage, tu bénéficies de vols radio-guidés illimités jusqu'à l'obtention de ta licence, à réaliser sur 18 mois à partir de ton inscription. Au minimum 50 vols sont nécessaires, et le matériel de vol est inclus pour les 15 premiers vols. Ce programme complet est proposé à 2000 CHF (transports non inclus).",
+            "mobile": "Vols radio-guidés illimités sur 18 mois jusqu'à ta licence. Min. 50 vols requis. Matériel inclus pour 15 vols. 2000 CHF (hors transport)."
+        }
+    },
+    "contact": {
+        "title": "Nous Trouver",
+        "adress": "Adresse",
+        "phone": "Téléphone",
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message",
+        "send": "Envoyer",
+        "send...": "Envoi...",
+        "sent": "Message envoyé avec succès!",
+        "error": "Erreur lors de l'envoi. Veuillez réessayer."
+
+    }
+}

@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "acceuil": "Startseite",
+    "vol_biplace": "Tandemflug",
+    "formation": "Ausbildung",
+    "qui_sommes_nous": "Wer sind wir?",
+    "contact": "Kontakt"
+  },
+  "welcome": {
+    "reserver_votre_vol": "Buchen Sie Ihren Flug"
+  },
+  "tamdem": {
+    "title": "Fliegen, ein Traum!",
+    "description": "Jeder hat schon einmal in den Himmel geschaut und den Wunsch verspürt zu fliegen… Mit uns ist das möglich! An jedem Tag des Jahres machen professionelle Piloten Ihren Traum wahr. Die Flüge finden von den Ruinettes oder Croix de Cœur statt. Nach 20 bis 25 Minuten eines unvergesslichen Fluges wird Ihr Pilot Sie in Le Châble landen, und Sie werden den Himmel nie wieder auf dieselbe Weise betrachten.",
+    "biplace": "Tandem", 
+    "extreme": "Extrem",
+    "time_biplace": "20-25 Minuten Flugzeit",
+    "time_extreme": "40-45 Minuten Flugzeit",
+    "price_biplace": "190 CHF pro Person",
+    "price_extreme": "250 CHF pro Person",
+    "duration_biplace": "Dauer der Aktivität ca. 1h30",
+    "duration_extreme": "Dauer der Aktivität ca. 2h00",
+    "description_box": "Auf Wunsch macht der Pilot einige Fotos und Videos.",
+    "nous_contacter": "Kontaktieren Sie uns"
+  },
+  "who_are_we": {
+    "title": "Wer sind wir?",
+    "description": "Unser Team besteht aus 2 Ausbildern, Sébastien Bruchez (alias 'Sonne') und mir, Nicolas Terrettaz. Aber das ist noch nicht alles, wir haben noch EINEN weiteren Ausbilder, Yael Margelisch. Dieses fröhliche Team ist hier, um Ihren Traum vom FLIEGEN Wirklichkeit werden zu lassen.",
+    "nicolas": {
+      "name": "Nicolas Terrettaz",
+      "comp1": "Zertifizierter Gleitschirmlehrer (OFAC)",
+      "comp2": "Professioneller Tandem-Gleitschirmpilot",
+      "comp3": "Fallschirm-Packer für Gleitschirmfliegen",
+      "comp4": "Schweizer Skilehrer, ISSA",
+      "comp5": "Schweizer Telemarklehrer, ISSA",
+      "comp6": "Gelernter Schreiner"
+    },
+    "sebastien": {
+      "name": "Sebastien Bruchez",
+      "comp1": "Gleitschirmlehrer",
+      "comp2": "Professioneller Tandem-Gleitschirmpilot",
+      "comp3": "Fallschirm-Packer für Gleitschirmfliegen",
+      "comp4": "Speedflying-Lehrer",
+      "comp5": "Gelernter Polymechaniker"
+    },
+    "yael": {
+      "name": "Yael Margelisch",
+      "comp1": "Professioneller Tandem-Gleitschirmpilot",
+      "comp2": "Fallschirm-Packer für Gleitschirmfliegen",
+      "comp3": "Schweizer Skilehrer, ISSA",
+      "comp4": "Zertifizierter Gleitschirmlehrer (OFAC)"
+    }
+  },
+  "formation": {
+    "title": "Möchtest du alleine fliegen?",
+    "description": "Vom ersten Flug bis zur Lizenz wirst du von einem Team von Profis betreut. In einer entspannten Atmosphäre erhältst du eine Ausbildung, die an dein Niveau angepasst ist, sodass du sicher Fortschritte machen kannst! Pauschale für die gesamte Ausbildung (Stufe 1 + Stufe 2): 2300 CHF",
+    "stage1": {
+      "title": "Stufe 1",
+      "text1": "Hangschule (2 halbe Tage)",
+      "text2": "Pädagogischer Tandemflug",
+      "text3": "Theorie vor dem ersten Alleinflug",
+      "text4": "Erster Alleinflug",
+      "price": "Preis: 490 CHF",
+      "material": "Flugausrüstung und Transport inbegriffen"
+    },
+    "stage2": {
+      "title": "Stufe 2",
+      "text1": "Unbegrenzte funkgesteuerte Flüge bis zur Lizenz, die innerhalb von 18 Monaten nach Beginn der Ausbildung durchgeführt werden müssen. (mindestens 50 Flüge)",
+      "text2": "Wenn du deine gesamte Ausbildung nicht bei uns absolvierst, ist das kein Problem. Es ist auch möglich, einige Trainingsflüge bei uns zu machen. Der Preis für das Coaching beträgt 30 CHF pro Flug. Die Kosten für die Ausrüstung betragen 30 CHF pro Flug.",
+      "price": "Preis: 2000 CHF",
+      "material": "Flugausrüstung in den ersten 15 Flügen inbegriffen."
+    },
+    "link": {
+      "title": "Nützliche Links",
+      "link1": "Meteo Schweiz",
+      "link2": "Meteo RTS",
+      "link3": "Gleitschirmwetter",
+      "link4": "Paradelta Club",
+      "link5": "Schweizer Hängegleiterverband",
+      "link6": "Verbier Infos"
+    }
+  },
+  "contact": {
+      "title": "Finden Sie uns",
+      "adress": "Adresse",
+      "phone": "Telefon",
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "send": "Senden",
+      "send...": "Senden...",
+      "sent": "Nachricht erfolgreich gesendet!",
+      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+  }
+}

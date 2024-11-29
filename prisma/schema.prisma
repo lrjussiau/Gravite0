@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int       @id @default(autoincrement())
+  name          String
+  email         String    @unique
+  passwordHash  String    // Stores hashed password
+  role          Role      // Enum for the different user roles (admin, company, pilot)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  bookings      Flight[]  // Relation: One user can create many bookings (flights)
+}
+
+model Pilot {
+  id            Int              @id @default(autoincrement())
+  name          String
+  licenseNumber String
+  availability  AvailabilityStatus
+  schedules     PilotSchedule[]   // Relation: One pilot can have many schedules
+  flights       Flight[]          // Relation: One pilot can be assigned to many flights
+}
+
+model Flight {
+  id          Int       @id @default(autoincrement())
+  date        DateTime
+  time        DateTime
+  clientName  String
+  company     String?   // Nullable if booked directly by admin (Al)
+  pilot       Pilot?    @relation(fields: [pilotId], references: [id]) // Pilot assigned to the flight
+  pilotId     Int?      // Nullable if the flight does not have an assigned pilot yet
+  status      FlightStatus
+  createdBy   User      @relation(fields: [createdById], references: [id]) // User who made the booking
+  createdById Int
+  notes       String?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  PilotSchedule PilotSchedule[] // Relation: A flight can have multiple schedules (for the pilots assigned)
+}
+
+model PilotSchedule {
+  id          Int       @id @default(autoincrement())
+  pilot       Pilot     @relation(fields: [pilotId], references: [id]) // Which pilot is being scheduled
+  pilotId     Int
+  flight      Flight?   @relation(fields: [flightId], references: [id]) // Reference to the flight
+  flightId    Int?
+  date        DateTime
+  startTime   DateTime
+  endTime     DateTime
+  status      ScheduleStatus
+}
+
+enum Role {
+  ADMIN
+  COMPANY
+  PILOT
+}
+
+enum AvailabilityStatus {
+  AVAILABLE
+  BOOKED
+  OFF_DUTY
+}
+
+enum FlightStatus {
+  BOOKED
+  COMPLETED
+  CANCELED
+}
+
+enum ScheduleStatus {
+  FREE
+  BOOKED
+  OFF_DUTY
+}

@@ -31,7 +31,7 @@ export const FormationPage = () => {
     <ContentContainer key="stage2" $width={{desktop:"100%", tablet:"100%", mobile:"100%"}} $direction={{desktop:"row"}} $gap={{desktop:"4%", mobile:"0"}}>
       <ImageContainer>
         <Image 
-          src="/images/Para-stage2.png"
+          src="/images/Para-Stage2.png"
           alt="Paragliding Picture"
           fill
           style={{ objectFit: 'cover' }}

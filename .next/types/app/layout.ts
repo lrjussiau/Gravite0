@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // File: /home/clients/2b4f34c4ddcf7ac0d1ab861022f204cd/Gravite0/app/layout.tsx
+=======
+// File: /Users/louis/Dev/Gravite0/app/layout.tsx
+>>>>>>> 72722f1e06ccefc24776cecfeaf6573941025cc8
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

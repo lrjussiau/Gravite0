@@ -1,0 +1,27 @@
+# Enable rewrite engine
+RewriteEngine On
+
+# Ensure HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Proxy rules
+ProxyRequests Off
+ProxyPreserveHost On
+
+# Forward all requests to Next.js server
+RewriteRule ^(.*)$ http://localhost:3000/$1 [P,L]
+
+# Additional headers for proxy
+<IfModule mod_headers.c>
+    RequestHeader set X-Forwarded-Proto "https"
+    RequestHeader set X-Forwarded-SSL "on"
+</IfModule>
+
+# Handle WebSocket connections
+RewriteCond %{HTTP:Upgrade} websocket [NC]
+RewriteCond %{HTTP:Connection} upgrade [NC]
+RewriteRule ^(.*)$ ws://localhost:3000/$1 [P,L]
+
+# Error handling
+ErrorDocument 503 /index.html

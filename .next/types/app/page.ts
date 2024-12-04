@@ -1,4 +1,4 @@
-// File: /home/clients/2b4f34c4ddcf7ac0d1ab861022f204cd/Gravite0/app/page.tsx
+// File: /Users/louis/Dev/Gravite0/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

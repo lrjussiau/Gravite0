@@ -1,10 +1,10 @@
 export const DEFAULT_CONTAINER_VALUES = {
   page: {
     height: {
-      desktop: '100vh',
-      tablet: '100vh',
-      mobile: '100vh',
-      smallMobile: '100vh'
+      desktop: '100%',
+      tablet: '100%',
+      mobile: '100%',
+      smallMobile: '100%'
     },
     width: {
       desktop: '100%',

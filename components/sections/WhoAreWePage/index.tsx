@@ -43,7 +43,7 @@ export const WhoAreWePage = () => {
   ];
 
   return (
-    <PageContainer id="about" $paddingTop={{mobile:"26%"}}>
+    <PageContainer id="about" $paddingTop={{mobile:"18%"}}>
       <ContentContainer $height="100%" $gap="2%" $width={{mobile:"100%"}}>
         <ContentContainer $height={{desktop:"40%", tablet:"60%", mobile:"30%"}} $justify="center" $gap="5%">
             <Title $margin="2% 0">{t('who_are_we.title')}</Title>

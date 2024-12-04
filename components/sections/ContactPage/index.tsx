@@ -26,7 +26,7 @@ export const ContactPage = () => {
     }, []);
 
     return (
-        <PageContainer id="contact" $paddingTop={{mobile:"23%", tablet:"23%"}}>
+        <PageContainer id="contact" $paddingTop={{mobile:"15%", tablet:"23%"}}>
             <ContentContainer $direction={{desktop:"row", tablet:"row"}}>
                 <ContentContainer $width="100%">
                     <ContactMap position={position} zoom={zoom} />

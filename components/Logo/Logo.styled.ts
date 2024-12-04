@@ -23,6 +23,10 @@ export const LogoContainer = styled.div`
     min-width: 150px;
     left: 40px;
   }
+
+  @media (max-width: ${BREAKPOINTS.mobile}px) {
+    height: 70px;
+  }
 `;
 
 // Logo Image

@@ -70,7 +70,7 @@ const NavBar: React.FC = () => {
       <NavContainer>
         <NavHeader>
           <BurgerButton onClick={() => {}}>
-            <Menu size={24} />
+            <Menu size={16} />
           </BurgerButton>
         </NavHeader>
         <NavList $isOpen={true} $isDesktop={true}>
@@ -101,7 +101,7 @@ const NavBar: React.FC = () => {
     <NavContainer>
       <NavHeader>
         <BurgerButton onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={16} /> : <Menu size={16} />}
         </BurgerButton>
       </NavHeader>
       <NavList $isOpen={isOpen} $isDesktop={isDesktop}>

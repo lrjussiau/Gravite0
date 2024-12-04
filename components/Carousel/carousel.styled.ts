@@ -18,6 +18,7 @@ interface NavigationButtonProps {
   $position: 'left' | 'right';
   $isActive: boolean;
 }
+
 interface DotDisplayProps {
   $isActive: boolean;
 }
@@ -35,10 +36,11 @@ export const CarouselContainer = styled.div<CarouselContainerProps>`
   display: flex;
   flex-direction: column;
   padding-bottom: ${props => props.$dots ? '0' : '2%'};
+  touch-action: pan-y pinch-zoom;
 
   @media (min-width: ${BREAKPOINTS.tablet}px) {
-  height: ${props => props.$height};
-}
+    height: ${props => props.$height};
+  }
 
   @media (max-width: ${BREAKPOINTS.mobile}px) {
     padding: 0;
@@ -53,6 +55,15 @@ export const SlidesWrapper = styled.div<{ $currentslide: number }>`
   align-items: center;
   justify-content: center;
   transition: transform 0.5s ease;
+  touch-action: pan-x;
+  user-select: none;
+  
+  @media (max-width: ${BREAKPOINTS.mobile}px) {
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
 `;
 
 export const SlideContainer = styled.div<SlideContainerProps>`
@@ -69,6 +80,7 @@ export const SlideContainer = styled.div<SlideContainerProps>`
 
   @media (max-width: ${BREAKPOINTS.mobile}px) {
     width: ${props => props.$mobileWidth};
+    transition: all 0.3s ease;
     left: ${props => {
       if (props.$position === 'left') {
         return props.$isActive ? `${(100 - parseInt(props.$mobileWidth))/2}%` : '-80%';
@@ -77,7 +89,6 @@ export const SlideContainer = styled.div<SlideContainerProps>`
     }};
   }
   
-  /* Position basée sur left/right et isActive */
   left: ${props => {
     if (props.$position === 'left') {
       return props.$isActive ? '12.5%' : '-60%';
@@ -89,11 +100,9 @@ export const SlideContainer = styled.div<SlideContainerProps>`
   opacity: ${props => props.$isActive ? 1 : 0.3};
   filter: blur(${props => props.$isActive ? 0 : 3}px);
   z-index: ${props => props.$isActive ? 2 : 1};
-
-
 `;
 
-  export const NavigationButton = styled.button<NavigationButtonProps>`
+export const NavigationButton = styled.button<NavigationButtonProps>`
   position: absolute;
   top: 50%;
   ${props => props.$position}: 1rem;
@@ -117,6 +126,7 @@ export const SlideContainer = styled.div<SlideContainerProps>`
   }
 
   @media (max-width: ${BREAKPOINTS.mobile}px) {
+    display: none;
     transform: none;
     width: 32px;
     height: 32px;
@@ -148,5 +158,10 @@ export const DotButton = styled.button<DotButtonProps>`
 
   &:hover {
     background-color: ${props => props.$active ? colors.primary : '#BDBDBD'};
+  }
+
+  @media (max-width: ${BREAKPOINTS.mobile}px) {
+    height: 6px;
+    width: ${props => props.$active ? '16px' : '8px'};
   }
 `;

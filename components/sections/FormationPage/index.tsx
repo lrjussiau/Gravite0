@@ -47,7 +47,7 @@ export const FormationPage = () => {
   ];
 
   return (
-    <PageContainer id="formation" $paddingTop={{mobile:"23%"}}>
+    <PageContainer id="formation" $paddingTop={{mobile:"20%"}}>
       <ContentContainer $justify="space-around" $direction={{mobile:"column-reverse"}} $width="100%">
         <ContentContainer $justify="center" 
                           $height={{desktop:'50%', tablet:"50%", mobile:'40%'}} 

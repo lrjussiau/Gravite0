@@ -76,7 +76,7 @@ export const TamdemPage = () => {
   ];
 
   return (
-    <PageContainer id="tandem" $paddingTop={{mobile:"23%"}}>
+    <PageContainer id="tandem" $paddingTop={{mobile:"20%"}}>
         <ContentContainer $height={{desktop: '87%', mobile: '100%'}} $width={{desktop:"70%"}}>
             <ContentContainer $direction={{mobile:"column", desktop:"row"}} $width="100%" $gap="1%" $justify="flex-end">
                 <ContentContainer $width={{mobile:"90%", desktop:"50%"}} $justify="flex-end" $height={{desktop: "100%",mobile:"33%"}}>

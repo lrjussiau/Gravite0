@@ -46,7 +46,7 @@ export const BurgerButton = styled.button`
   /* Reset button styles */
   background: none;
   border: none;
-  padding: 0.5rem;
+  padding: 0.2rem 0.5rem;
   
   /* Visual styles */
   color: #333;

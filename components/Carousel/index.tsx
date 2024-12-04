@@ -1,5 +1,5 @@
 // index.tsx
-import React, { useState } from 'react';
+import React, { useState, useRef, TouchEvent } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   CarouselContainer,
@@ -30,13 +30,37 @@ export const Carousel: React.FC<CarouselProps> = ({
     $mobileWidth = '100%'
   }) => {
     const [$currentslide, setCurrentslide] = useState(0);
-  
+    const touchStartXRef = useRef(0);
+    const touchEndXRef = useRef(0);
+    const minSwipeDistance = 50;
+
     const nextSlide = () => {
-      setCurrentslide(0);
+      setCurrentslide(prev => (prev === 0 ? 1 : 0));
     };
   
     const prevSlide = () => {
-      setCurrentslide(1);
+      setCurrentslide(prev => (prev === 1 ? 0 : 1));
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartXRef.current = e.touches[0].clientX;
+      touchEndXRef.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      touchEndXRef.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+      const swipeDistance = touchEndXRef.current - touchStartXRef.current;
+      
+      if (Math.abs(swipeDistance) > minSwipeDistance) {
+        if (swipeDistance > 0) {
+          prevSlide();
+        } else {
+          nextSlide();
+        }
+      }
     };
   
     React.useEffect(() => {
@@ -48,7 +72,12 @@ export const Carousel: React.FC<CarouselProps> = ({
   
     return (
       <CarouselContainer $height={$height} $width={$width} $dots={$dots}>
-         <SlidesWrapper $currentslide={$currentslide}>
+         <SlidesWrapper 
+           $currentslide={$currentslide}
+           onTouchStart={handleTouchStart}
+           onTouchMove={handleTouchMove}
+           onTouchEnd={handleTouchEnd}
+         >
           {$slides.map((slide, index) => (
             <SlideContainer
               key={index}

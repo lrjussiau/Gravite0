@@ -57,7 +57,7 @@ export const VerticalText = styled.div`
     }
 
     @media (max-width: ${BREAKPOINTS.mobile}px) {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 `;
 

@@ -5,10 +5,6 @@ export const Container = styled.div`
   height: 100dvh;
   width: 100%;
   scroll-snap-type: y mandatory; // Si vous voulez garder le scroll snap
-
-  @media (max-height: 600px) {
-    scroll-snap-type: none;
-  }
 `;
 
 export const Section = styled.section`
@@ -16,9 +12,4 @@ export const Section = styled.section`
   width: 100%;
   scroll-snap-align: start;
   position: relative;
-
-  @media (max-height: 600px) {
-    min-height: auto;
-    height: auto;
-  }
 `;

@@ -30,10 +30,10 @@ export const TamdemPage = () => {
                 />
             </ImageBackground>
             <TopTitleContainer className="hover-container">
-                <SubTitle color={colors.background}>{t('tamdem.biplace')}</SubTitle>
+                <Text color={colors.background} $fontWeight="900" $align="center">{t('tamdem.biplace')}</Text>
             </TopTitleContainer>
             <HoverTitle className="hover-title">
-                <Text $fontSize="2.5rem" color="white" $fontWeight="900">{t('tamdem.choice')}</Text>
+                <Text $fontSize="1.8rem" color="white" $fontWeight="900">{t('tamdem.choice')}</Text>
             </HoverTitle>
             <BottomTextContainer className="hover-container">
                 <ContentContainer $width="100%" $justify="space-around">
@@ -57,10 +57,9 @@ export const TamdemPage = () => {
                 />
             </ImageBackground>
             <TopTitleContainer className="hover-container">
-                <SubTitle color={colors.background}>{t('tamdem.extreme')}</SubTitle>
-            </TopTitleContainer>
+                <Text color={colors.background} $fontWeight="900" $align="center">{t('tamdem.extreme')}</Text>            </TopTitleContainer>
             <HoverTitle className="hover-title">
-                <Text $fontSize="2.5rem" color="white" $fontWeight="900">{t('tamdem.choice')}</Text>
+                <Text $fontSize="1.8rem" color="white" $fontWeight="900">{t('tamdem.choice')}</Text>
             </HoverTitle>
             <BottomTextContainer className="hover-container">
                 <ContentContainer $width="100%" $justify="space-around">
@@ -89,7 +88,7 @@ export const TamdemPage = () => {
                         />
                     </ImageContainer>
                     <ContentContainer $height={{tablet:"45%", desktop:"50%"}} $width="100%" $gap="5%" $justify="center">
-                        <Title>{t('tamdem.title')}</Title>
+                        <Title $fontSize={{desktop:"2rem"}}>{t('tamdem.title')}</Title>
                         <HorizontalLine $width="50%" $height="2px" $color={colors.primary} $margin="0 0px"/>
                         <ResponsiveText $align="justify" $desktop={t('tamdem.description.desktop')} $mobile={t('tamdem.description.mobile')} />
                         <HorizontalLine $width="50%" $height="2px" $color={colors.primary} $margin="0px"/>

@@ -73,16 +73,18 @@
         }
     },
     "contact": {
-        "title": "Nous Trouver",
-        "adress": "Adresse",
+        "title": "Nous contacter",
+        "description": "Pour réserver votre baptême en parapente ou obtenir plus d'informations, n'hésitez pas à nous contacter. Notre équipe de passionnés sera ravie de vous accompagner dans cette belle aventure !",
         "phone": "Téléphone",
+        "whatsapp": "WhatsApp",
         "name": "Nom",
         "email": "Email",
         "message": "Message",
         "send": "Envoyer",
         "send...": "Envoi...",
         "sent": "Message envoyé avec succès!",
-        "error": "Erreur lors de l'envoi. Veuillez réessayer."
-
+        "error": "Erreur lors de l'envoi. Veuillez réessayer.",
+        "back": "Retour",
+        "formTitle": "Envoyer nous un message"
     }
 }

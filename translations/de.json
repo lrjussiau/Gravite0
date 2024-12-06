@@ -1,94 +1,86 @@
 {
   "nav": {
-    "acceuil": "Startseite",
-    "vol_biplace": "Tandemflug",
-    "formation": "Ausbildung",
-    "qui_sommes_nous": "Wer sind wir?",
-    "contact": "Kontakt"
+      "acceuil": "Startseite",
+      "vol_biplace": "Tandemflug",
+      "formation": "Ausbildung",
+      "qui_sommes_nous": "Über uns",
+      "contact": "Kontakt"
   },
   "welcome": {
-    "reserver_votre_vol": "Buchen Sie Ihren Flug"
+      "reserver_votre_vol": "Flug buchen"
   },
   "tamdem": {
-    "title": "Fliegen, ein Traum!",
-    "description": "Jeder hat schon einmal in den Himmel geschaut und den Wunsch verspürt zu fliegen… Mit uns ist das möglich! An jedem Tag des Jahres machen professionelle Piloten Ihren Traum wahr. Die Flüge finden von den Ruinettes oder Croix de Cœur statt. Nach 20 bis 25 Minuten eines unvergesslichen Fluges wird Ihr Pilot Sie in Le Châble landen, und Sie werden den Himmel nie wieder auf dieselbe Weise betrachten.",
-    "biplace": "Tandem", 
-    "extreme": "Extrem",
-    "time_biplace": "20-25 Minuten Flugzeit",
-    "time_extreme": "40-45 Minuten Flugzeit",
-    "price_biplace": "190 CHF pro Person",
-    "price_extreme": "250 CHF pro Person",
-    "duration_biplace": "Dauer der Aktivität ca. 1h30",
-    "duration_extreme": "Dauer der Aktivität ca. 2h00",
-    "description_box": "Auf Wunsch macht der Pilot einige Fotos und Videos.",
-    "nous_contacter": "Kontaktieren Sie uns"
+      "title": "Fliegen, ein Traum!",
+      "choice": "Wähle deinen Flug",
+      "description": {
+          "desktop": "Jeder hat schon einmal in den Himmel geschaut und vom Fliegen geträumt... Mit uns wird es möglich! An jedem Tag des Jahres machen professionelle Piloten deinen Traum zur Wirklichkeit. Die Flüge starten von Les Ruinettes oder Croix de Cœur. Nach 20 bis 25 Minuten unvergesslichen Fluges landet dein Pilot in Le Châble, von wo aus du den Himmel nie wieder mit den gleichen Augen sehen wirst.",
+          "mobile": "Lust zu fliegen? Mit uns ist es möglich! Jeden Tag verwirklichen Profipiloten deinen Traum. Start von Les Ruinettes oder Croix de Cœur, für 20-25 Minuten unvergesslichen Flug nach Le Châble."
+      },
+      "biplace": "Tandemflug",
+      "extreme": "Extremflug",
+      "time_biplace": "20-25 min Flug",
+      "time_extreme": "40-45 min Flug",
+      "price_biplace": "190 CHF pro Person",
+      "price_extreme": "250 CHF pro Person",
+      "duration_biplace": "Aktivitätsdauer ca. 1:30 Std",
+      "duration_extreme": "Aktivitätsdauer ca. 2:00 Std",
+      "description_box": "Auf Anfrage macht der Pilot Fotos und Videos.",
+      "nous_contacter": "Platz reservieren"
   },
   "who_are_we": {
-    "title": "Wer sind wir?",
-    "description": "Unser Team besteht aus 2 Ausbildern, Sébastien Bruchez (alias 'Sonne') und mir, Nicolas Terrettaz. Aber das ist noch nicht alles, wir haben noch EINEN weiteren Ausbilder, Yael Margelisch. Dieses fröhliche Team ist hier, um Ihren Traum vom FLIEGEN Wirklichkeit werden zu lassen.",
-    "nicolas": {
-      "name": "Nicolas Terrettaz",
-      "comp1": "Zertifizierter Gleitschirmlehrer (OFAC)",
-      "comp2": "Professioneller Tandem-Gleitschirmpilot",
-      "comp3": "Fallschirm-Packer für Gleitschirmfliegen",
-      "comp4": "Schweizer Skilehrer, ISSA",
-      "comp5": "Schweizer Telemarklehrer, ISSA",
-      "comp6": "Gelernter Schreiner"
-    },
-    "sebastien": {
-      "name": "Sebastien Bruchez",
-      "comp1": "Gleitschirmlehrer",
-      "comp2": "Professioneller Tandem-Gleitschirmpilot",
-      "comp3": "Fallschirm-Packer für Gleitschirmfliegen",
-      "comp4": "Speedflying-Lehrer",
-      "comp5": "Gelernter Polymechaniker"
-    },
-    "yael": {
-      "name": "Yael Margelisch",
-      "comp1": "Professioneller Tandem-Gleitschirmpilot",
-      "comp2": "Fallschirm-Packer für Gleitschirmfliegen",
-      "comp3": "Schweizer Skilehrer, ISSA",
-      "comp4": "Zertifizierter Gleitschirmlehrer (OFAC)"
-    }
+      "title": "Wer sind wir?",
+      "description": "Unser Team besteht aus 2 Ausbildern. Sébastien Bruchez (genannt 'soleil') und ich, Nicolas Terrettaz. Aber das ist noch nicht alles, wir haben noch EINE Ausbilderin, Yael Margelisch. Dieses ganze fröhliche Team ist hier, um deinen Traum vom FLIEGEN Wirklichkeit werden zu lassen.",
+      "nicolas": {
+          "name": "Nicolas Terrettaz",
+          "comp1": "OFAC Gleitschirmfluglehrer",
+          "comp2": "Professioneller Tandemgleitschirmpilot",
+          "comp3": "Gleitschirm-Rettungsfallschirmpacker",
+          "comp4": "Schweizer Skilehrer, ISSA",
+          "comp5": "Schweizer Telemark-Lehrer, ISSA",
+          "comp6": "Gelernter Schreiner"
+      },
+      "sebastien": {
+          "name": "Sebastien Bruchez",
+          "comp1": "Gleitschirmfluglehrer",
+          "comp2": "Professioneller Tandemgleitschirmpilot",
+          "comp3": "Gleitschirm-Rettungsfallschirmpacker",
+          "comp4": "Speedflying-Lehrer",
+          "comp5": "Gelernter Polymechaniker"
+      },
+      "yael": {
+          "name": "Yael Margelisch",
+          "comp1": "Professionelle Tandemgleitschirmpilot",
+          "comp2": "Gleitschirm-Rettungsfallschirmpacker",
+          "comp3": "Schweizer Skilehrer ISSA",
+          "comp4": "OFAC Gleitschirmfluglehrer"
+      }
   },
   "formation": {
-    "title": "Möchtest du alleine fliegen?",
-    "description": "Vom ersten Flug bis zur Lizenz wirst du von einem Team von Profis betreut. In einer entspannten Atmosphäre erhältst du eine Ausbildung, die an dein Niveau angepasst ist, sodass du sicher Fortschritte machen kannst! Pauschale für die gesamte Ausbildung (Stufe 1 + Stufe 2): 2300 CHF",
-    "stage1": {
-      "title": "Stufe 1",
-      "text1": "Hangschule (2 halbe Tage)",
-      "text2": "Pädagogischer Tandemflug",
-      "text3": "Theorie vor dem ersten Alleinflug",
-      "text4": "Erster Alleinflug",
-      "price": "Preis: 490 CHF",
-      "material": "Flugausrüstung und Transport inbegriffen"
-    },
-    "stage2": {
-      "title": "Stufe 2",
-      "text1": "Unbegrenzte funkgesteuerte Flüge bis zur Lizenz, die innerhalb von 18 Monaten nach Beginn der Ausbildung durchgeführt werden müssen. (mindestens 50 Flüge)",
-      "text2": "Wenn du deine gesamte Ausbildung nicht bei uns absolvierst, ist das kein Problem. Es ist auch möglich, einige Trainingsflüge bei uns zu machen. Der Preis für das Coaching beträgt 30 CHF pro Flug. Die Kosten für die Ausrüstung betragen 30 CHF pro Flug.",
-      "price": "Preis: 2000 CHF",
-      "material": "Flugausrüstung in den ersten 15 Flügen inbegriffen."
-    },
-    "link": {
-      "title": "Nützliche Links",
-      "link1": "Meteo Schweiz",
-      "link2": "Meteo RTS",
-      "link3": "Gleitschirmwetter",
-      "link4": "Paradelta Club",
-      "link5": "Schweizer Hängegleiterverband",
-      "link6": "Verbier Infos"
-    }
+      "title": "Willst du alleine fliegen?",
+      "description": {
+          "desktop": "Vom ersten Flug bis zur Lizenz wirst du von einem professionellen Team betreut. In entspannter Atmosphäre erhältst du einen auf dein Niveau abgestimmten Unterricht, um sicher Fortschritte zu machen! Pauschalpreis für die gesamte Ausbildung (Phase 1 + Phase 2): 2300.- CHF",
+          "mobile": "Vom ersten Flug bis zur Lizenz, betreut von Profis in entspannter Atmosphäre. Komplette Ausbildung (Phase 1 + Phase 2): 2300.- CHF"
+      },
+      "stage1": {
+          "title": "Phase 1",
+          "desktop": "In dieser Phase lernst du die Grundlagen des Gleitschirmfliegens kennen. Sie umfasst zwei halbe Tage am Übungshang, einen pädagogischen Tandemflug für erste Flugerfahrungen, eine Theoriesitzung vor deinem ersten Soloflug und schließlich deinen ersten eigenständigen Flug! Flugausrüstung und Transport sind im Preis von 490 CHF inbegriffen.",
+          "mobile": "Entdecke die Grundlagen des Gleitschirmfliegens: 2 Übungshang-Sessions, 1 Tandemflug, Theorie und dein 1. Soloflug! Ausrüstung und Transport inklusive. 490 CHF."
+      },
+      "stage2": {
+          "title": "Phase 2",
+          "desktop": "In dieser Phase erhältst du unbegrenzte funkgeführte Flüge bis zum Erhalt deiner Lizenz, die innerhalb von 18 Monaten nach Anmeldung abzuschließen sind. Mindestens 50 Flüge sind erforderlich, und die Flugausrüstung ist für die ersten 15 Flüge inbegriffen. Dieses komplette Programm wird für 2000 CHF angeboten (Transport nicht inbegriffen).",
+          "mobile": "Unbegrenzte funkgeführte Flüge über 18 Monate bis zur Lizenz. Min. 50 Flüge erforderlich. Ausrüstung für 15 Flüge inklusive. 2000 CHF (ohne Transport)."
+      }
   },
   "contact": {
-      "title": "Finden Sie uns",
+      "title": "Uns finden",
       "adress": "Adresse",
       "phone": "Telefon",
       "name": "Name",
       "email": "E-Mail",
       "message": "Nachricht",
       "send": "Senden",
-      "send...": "Senden...",
+      "send...": "Wird gesendet...",
       "sent": "Nachricht erfolgreich gesendet!",
       "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
   }

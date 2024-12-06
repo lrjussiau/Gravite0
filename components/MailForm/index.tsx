@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
-import { FormContainer,
-            Form,
-            FormGroup,
-            Label,
-            Input,
-            TextArea,
-            Button } from './mailForm.styled';    
+import { FormContainer, Form, FormGroup, Label, Input, TextArea, Button } from './mailForm.styled';    
 import { useTranslation } from 'react-i18next'; 
 import { Text, SubTitle } from 'components/shared/Typography';
 import { colors } from 'styles/color';
+import { ArrowLeft } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -16,7 +11,12 @@ interface FormData {
   message: string;
 }
 
-const ContactForm = () => {
+interface ContactFormProps {
+  isVisible: boolean;
+  onBack: () => void;
+}
+
+export const ContactForm: React.FC<ContactFormProps> = ({ isVisible, onBack }) => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -58,8 +58,10 @@ const ContactForm = () => {
   };
 
   return (
-    <FormContainer>
-      <SubTitle $fontSize="1.5rem" color={colors.primary} $fontWeight='600' $margin="0 4%" $centered>Envoie nous un message</SubTitle>
+    <FormContainer $isVisible={isVisible}>
+      <SubTitle $fontSize="1.5rem" color={colors.primary} $fontWeight='600' $margin="0 4%" $centered>
+        {t('contact.formTitle')}
+      </SubTitle>
       <Form onSubmit={handleSubmit}>
         <FormGroup>
           <Label htmlFor="name"><Text $fontWeight='200'>{t('contact.name')}</Text></Label>
@@ -103,8 +105,23 @@ const ContactForm = () => {
         {status === 'success' && <Text color='green' $fontSize={{desktop:"0.8rem"}}>{t('contact.sent')}</Text>}
         {status === 'error' && <Text color='red' $fontSize={{desktop:"0.8rem"}}>{t('contact.error')}</Text>}
       </Form>
+      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+        <button
+          onClick={onBack}
+          style={{
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            padding: '8px'
+          }}
+        >
+          <ArrowLeft size={20} color={colors.text.light}/>
+          <Text color={colors.text.light} $fontWeight="100">{t('contact.back')}</Text>
+        </button>
+      </div>
     </FormContainer>
   );
 };
-
-export default ContactForm;

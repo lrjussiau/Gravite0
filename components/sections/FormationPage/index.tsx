@@ -12,7 +12,7 @@ export const FormationPage = () => {
   const { t } = useTranslation();
 
   const slides = [
-    <ContentContainer key="stage1" $width={{desktop:"100%", tablet:"100%", mobile:"100%"}} $direction={{desktop:"row"}} $gap={{desktop:"4%", mobile:"0"}}>
+    <ContentContainer key="stage1" $padding={{desktop:"0 1rem 0 0"}} $width={{desktop:"100%", tablet:"100%", mobile:"100%"}} $direction={{desktop:"row"}} $gap={{desktop:"1rem", mobile:"0"}}>
       <ImageContainer>
         <Image 
           src="/images/Para-stage1.png"
@@ -28,7 +28,7 @@ export const FormationPage = () => {
         <ResponsiveText $align="justify" $desktop={t('formation.stage1.desktop')} $mobile={t('formation.stage1.mobile')} />
       </ContentContainer>
     </ContentContainer>,
-    <ContentContainer key="stage2" $width={{desktop:"100%", tablet:"100%", mobile:"100%"}} $direction={{desktop:"row"}} $gap={{desktop:"4%", mobile:"0"}}>
+    <ContentContainer key="stage2" $padding={{desktop:"0 1rem 0 0"}} $width={{desktop:"100%", tablet:"100%", mobile:"100%"}} $direction={{desktop:"row"}} $gap={{desktop:"1rem", mobile:"0"}}>
       <ImageContainer>
         <Image 
           src="/images/Para-Stage2.png"

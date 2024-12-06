@@ -5,7 +5,7 @@ import { colors } from 'styles/color';
 export const ImageContainer = styled.div`
     position: relative;
     height: 100%;
-    width: auto;
+    width: 50%;
     aspect-ratio: 1/1;
     border-radius: 20px;
     overflow: hidden;
@@ -40,8 +40,8 @@ export const BoxText = styled.div`
     border-bottom-left-radius: 10px;
 
     display: flex;
-    align-items: center; // Centre verticalement le contenu
-    justify-content: center; // Centre horizontalement si nécessaire
+    align-items: center;
+    justify-content: center;
 `;
 
 export const VerticalText = styled.div`

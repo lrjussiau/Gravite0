@@ -3,18 +3,27 @@ import { colors } from "styles/color";
 import { BREAKPOINTS } from 'utils/DeviceDetect';
 
 
-// Styled Components
-export const FormContainer = styled.div`
+export const FormContainer = styled.div<{ $isVisible: boolean }>`
   width: 100%;
   margin: 0 auto;
   padding: 20px;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: ${props => props.$isVisible ? 1 : 0};
+  visibility: ${props => props.$isVisible ? 'visible' : 'hidden'};
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition-delay: ${props => props.$isVisible ? '0.3s' : '0s'};
+  ${props => !props.$isVisible && `
+    position: absolute;
+    pointer-events: none;
+  `}
 
   @media (max-width: ${BREAKPOINTS.mobile}px) {
-    display: none;
+    height: auto;
   }
 `;
-
 export const Form = styled.form`
   display: flex;
   flex-direction: column;

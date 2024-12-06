@@ -1,34 +1,32 @@
-import { Footer, ItemPlacer, ItemWrapper, IconWrapper, RightContent, ButtonWrapper } from "./ContactPage.styled";
+import { Footer, ItemPlacer, ItemWrapper, IconWrapper, RightContent, ButtonWrapper, Content } from "./ContactPage.styled";
 import ContactMap from "components/Map";
-import ContactForm from "components/MailForm";
-import { Text } from 'components/shared/Typography';
-import { PageContainer, ContentContainer } from 'components/shared/Container';
+import { ContactForm } from "components/MailForm";
+import { SubTitle, Text } from 'components/shared/Typography';
+import { PageContainer, ContentContainer} from 'components/shared/Container';
 import { colors } from "styles/color";
-import { Mail, Phone, MapPin} from 'lucide-react';
-import { ResponsiveText } from "components/shared/ResponsiveText";
-import { useState, useEffect } from "react";
-import { BREAKPOINTS } from "utils/DeviceDetect";
+import { Mail, Phone, MapPin, ArrowLeft } from 'lucide-react';
+import Image from 'next/image';
+import { useTranslation } from "react-i18next";
+import { useState } from 'react';
 
 export const ContactPage = () => {
-    const position: [number, number] = [46.079220, 7.215883]; // Coordonnées sous forme de tableau
+    const position: [number, number] = [46.079220, 7.215883];
     const zoom = 13;
+    const { t } = useTranslation();
+    const [showMailForm, setShowMailForm] = useState(false);
 
-    const [iconSize, setIconSize] = useState(40);
+    const handleMessageClick = () => {
+        setShowMailForm(true);
+    };
 
-    useEffect(() => {
-      const handleResize = () => {
-        setIconSize(window.innerWidth <= BREAKPOINTS.mobile ? 30 : 40);
-      };
-      
-      handleResize();
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    const handleBack = () => {
+        setShowMailForm(false);
+    };
 
     return (
         <PageContainer id="contact" $paddingTop={{mobile:"15%", tablet:"23%"}}>
-            <ContentContainer $direction={{desktop:"row", tablet:"row"}}>
-                <ContentContainer $width="100%">
+            <ContentContainer $direction={{desktop:"row", mobile:"column-reverse"}} $height="80%">
+                <ContentContainer $width="100%" $height={{mobile:"20%"}}>
                     <ContactMap position={position} zoom={zoom} />
                     <ItemPlacer>
                         <ItemWrapper>
@@ -52,22 +50,36 @@ export const ContactPage = () => {
                     </ItemPlacer>
                 </ContentContainer>
                 <RightContent>
-                    <ContactForm />
-                    <ContentContainer $justify="center" $width="100%">
-                        <ResponsiveText $mobile="Contact nous !" $desktop="Ou par mail/telephone" $fontSize="1.5rem" color={colors.primary} $fontWeight='700' $align="center"></ResponsiveText>
-                        <ContentContainer $direction="row" $height={{desktop:"100%", tablet:"50%", mobile:"50%"}} $width="100%" $justify="space-around">
-                            <ButtonWrapper>
-                                <Mail size={iconSize} color={colors.primary} />
-                            </ButtonWrapper>
-                            <ButtonWrapper>
-                                <Phone size={iconSize} color={colors.primary} />
-                            </ButtonWrapper>
+                    <Content $visible={!showMailForm}>
+                        <ContentContainer $width="100%" $gap="5%">
+                            <ContentContainer $height="auto" $width="100%">
+                                <SubTitle>{t('contact.title')}</SubTitle>
+                                <Text $align="justify">{t('contact.description')}</Text>
+                            </ContentContainer>
+                            <ContentContainer $width="100%" $gap="4%">
+                                <ButtonWrapper onClick={handleMessageClick}>
+                                    <Image src="/images/icons/message.png" alt="Message Icon" width={32} height={32} />
+                                    <Text color={colors.text.light}>{t('contact.message')}</Text>
+                                </ButtonWrapper>
+                                <ButtonWrapper onClick={() => window.location.href = 'tel:+41782499015'}>
+                                    <Image src="/images/icons/telephone.png" alt="Phone Icon" width={32} height={32} />
+                                    <Text color={colors.text.light}>{t('contact.phone')}</Text>
+                                </ButtonWrapper>
+                                <ButtonWrapper onClick={() => window.location.href = 'mailto:lr.jussiaume@gmail.com'}>
+                                    <Image src="/images/icons/email.png" alt="Email Icon" width={32} height={32} />
+                                    <Text color={colors.text.light}>{t('contact.email')}</Text>
+                                </ButtonWrapper>
+                                <ButtonWrapper onClick={() => window.location.href = 'https://wa.me/41782499015'}>
+                                    <Image src="/images/icons/whatsapp.png" alt="WhatsApp Icon" width={32} height={32} />
+                                    <Text color={colors.text.light}>{t('contact.whatsapp')}</Text>
+                                </ButtonWrapper>
+                            </ContentContainer>
                         </ContentContainer>
-                    </ContentContainer>
+                    </Content>
+                    <ContactForm isVisible={showMailForm} onBack={handleBack} />
                 </RightContent>
             </ContentContainer>
-            <Footer>
-            </Footer>
+            <Footer />
         </PageContainer>
     );
-}
+};

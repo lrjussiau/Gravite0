@@ -77,7 +77,6 @@ export const ContentContainer = styled.div<ContainerProps>`
   width: ${props => getResponsiveValue(props.$width, DEFAULT_CONTAINER_VALUES.content.width).default};
   gap: ${props => getResponsiveValue(props.$gap, DEFAULT_CONTAINER_VALUES.content.gap).default};
   padding: ${props => getResponsiveValue(props.$padding, DEFAULT_CONTAINER_VALUES.content.padding).default};
-  overflow-y: auto;
 
   @media (max-width: ${BREAKPOINTS.tablet}px) {
     flex-direction: ${props => getResponsiveValue(props.$direction, DEFAULT_CONTAINER_VALUES.content.direction).tablet};

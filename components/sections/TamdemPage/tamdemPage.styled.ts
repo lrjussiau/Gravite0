@@ -123,9 +123,8 @@ export const HoverTitle = styled.div`
 `;
 
 export const ContactButton = styled.button`
-    width: 50%;
-    height: 40px;
     border: none;
+    padding: 10px 20px;
     background-color: ${colors.primaryHover};
     color: #fff;
     font-size: 1.2rem;

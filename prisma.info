@@ -1,3 +1,19 @@
 npx prisma migrate dev --name init
 npx prisma generate
 npx prisma studio
+npx prisma db seed
+
+
+package
+npx @next/codemod new-link .
+npm install bcryptjs
+npm install @prisma/client
+npm install react-big-calendar
+npm install date-fns date-fns-tz
+
+tsx
+npm i --save-dev @types/bcryptjs
+
+npm i sass
+
+

@@ -105,7 +105,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ isVisible, onBack }) =
         {status === 'success' && <Text color='green' $fontSize={{desktop:"0.8rem"}}>{t('contact.sent')}</Text>}
         {status === 'error' && <Text color='red' $fontSize={{desktop:"0.8rem"}}>{t('contact.error')}</Text>}
       </Form>
-      <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
+      <div style={{ display: 'flex', alignItems: 'center'}}>
         <button
           onClick={onBack}
           style={{

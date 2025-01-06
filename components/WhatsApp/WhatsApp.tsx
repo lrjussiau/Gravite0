@@ -5,7 +5,7 @@ import Image from 'next/image';
 const WhatsAppButton: React.FC = () => {
   return (
     <ButtonContainer>
-      <WhatsAppButtonStyled>
+      <WhatsAppButtonStyled onClick={() => window.location.href = 'https://wa.me/41782499015'}>
         <ImageWrapper>
           <Image
               src="/images/whatsapp.png"

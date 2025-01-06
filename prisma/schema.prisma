@@ -1,5 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
 }
 
 datasource db {
@@ -8,53 +9,51 @@ datasource db {
 }
 
 model User {
-  id            Int       @id @default(autoincrement())
-  name          String
-  email         String    @unique
-  passwordHash  String    // Stores hashed password
-  role          Role      // Enum for the different user roles (admin, company, pilot)
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
-  bookings      Flight[]  // Relation: One user can create many bookings (flights)
+  id           Int      @id @default(autoincrement())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         Role
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  bookings     Flight[]
+  pilot        Pilot?
 }
 
 model Pilot {
-  id            Int              @id @default(autoincrement())
-  name          String
-  licenseNumber String
-  availability  AvailabilityStatus
-  schedules     PilotSchedule[]   // Relation: One pilot can have many schedules
-  flights       Flight[]          // Relation: One pilot can be assigned to many flights
+  id             Int                   @id @default(autoincrement())
+  userId         Int                   @unique
+  availability   AvailabilityStatus
+  flights        Flight[]
+  user           User                  @relation(fields: [userId], references: [id])
+  unavailability PilotUnavailability[]
 }
 
 model Flight {
-  id          Int       @id @default(autoincrement())
+  id          Int          @id @default(autoincrement())
   date        DateTime
-  time        DateTime
+  timeStart   DateTime
+  timeEnd     DateTime
   clientName  String
-  company     String?   // Nullable if booked directly by admin (Al)
-  pilot       Pilot?    @relation(fields: [pilotId], references: [id]) // Pilot assigned to the flight
-  pilotId     Int?      // Nullable if the flight does not have an assigned pilot yet
+  pilotId     Int?
   status      FlightStatus
-  createdBy   User      @relation(fields: [createdById], references: [id]) // User who made the booking
   createdById Int
   notes       String?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
-
-  PilotSchedule PilotSchedule[] // Relation: A flight can have multiple schedules (for the pilots assigned)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  createdBy   User         @relation(fields: [createdById], references: [id])
+  pilot       Pilot?       @relation(fields: [pilotId], references: [id])
 }
 
-model PilotSchedule {
-  id          Int       @id @default(autoincrement())
-  pilot       Pilot     @relation(fields: [pilotId], references: [id]) // Which pilot is being scheduled
-  pilotId     Int
-  flight      Flight?   @relation(fields: [flightId], references: [id]) // Reference to the flight
-  flightId    Int?
-  date        DateTime
-  startTime   DateTime
-  endTime     DateTime
-  status      ScheduleStatus
+model PilotUnavailability {
+  id        Int      @id @default(autoincrement())
+  pilotId   Int
+  startTime DateTime
+  endTime   DateTime
+  reason    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  pilot     Pilot    @relation(fields: [pilotId], references: [id])
 }
 
 enum Role {
@@ -70,13 +69,8 @@ enum AvailabilityStatus {
 }
 
 enum FlightStatus {
+  PENDING
   BOOKED
   COMPLETED
   CANCELED
-}
-
-enum ScheduleStatus {
-  FREE
-  BOOKED
-  OFF_DUTY
 }

@@ -1,0 +1,25 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.calendar-page {
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/ /* Centers child elements horizontally */
+  /*padding: 40px 20px;*/ /* Adds padding around the content */
+  font-family: 'Poppins', sans-serif; /* Apply the Poppins font */
+  background-color: #f9f9f9; /* Optional: light background color */
+}
+
+.page-title {
+  text-align: center; /* Centers text within the h1 */
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
+}

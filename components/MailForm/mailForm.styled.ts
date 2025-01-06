@@ -28,6 +28,10 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
+
+  @media (max-width: ${BREAKPOINTS.mobile}px) {
+    gap: 5px;
+  }
 `;
 
 export const FormGroup = styled.div`
@@ -51,6 +55,10 @@ export const TextArea = styled.textarea`
   border: 1px solid #ddd;
   border-radius: 4px;
   min-height: 100px;
+
+  @media (max-width: ${BREAKPOINTS.mobile}px) {
+    min-height: 50px;
+  }
 `;
 
 export const Button = styled.button`

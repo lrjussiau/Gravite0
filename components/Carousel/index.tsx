@@ -1,5 +1,5 @@
-// index.tsx
-import React, { useState, useRef, TouchEvent } from 'react';
+import React, { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import {
   CarouselContainer,
@@ -30,9 +30,6 @@ export const Carousel: React.FC<CarouselProps> = ({
     $mobileWidth = '100%'
   }) => {
     const [$currentslide, setCurrentslide] = useState(0);
-    const touchStartXRef = useRef(0);
-    const touchEndXRef = useRef(0);
-    const minSwipeDistance = 50;
 
     const nextSlide = () => {
       setCurrentslide(prev => (prev === 0 ? 1 : 0));
@@ -42,26 +39,14 @@ export const Carousel: React.FC<CarouselProps> = ({
       setCurrentslide(prev => (prev === 1 ? 0 : 1));
     };
 
-    const handleTouchStart = (e: TouchEvent) => {
-      touchStartXRef.current = e.touches[0].clientX;
-      touchEndXRef.current = e.touches[0].clientX;
-    };
-
-    const handleTouchMove = (e: TouchEvent) => {
-      touchEndXRef.current = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = () => {
-      const swipeDistance = touchEndXRef.current - touchStartXRef.current;
-      
-      if (Math.abs(swipeDistance) > minSwipeDistance) {
-        if (swipeDistance > 0) {
-          prevSlide();
-        } else {
-          nextSlide();
-        }
-      }
-    };
+    const handlers = useSwipeable({
+      onSwipedLeft: () => nextSlide(),
+      onSwipedRight: () => prevSlide(),
+      trackMouse: false,
+      preventScrollOnSwipe: false,
+      delta: 50,
+      swipeDuration: 500,
+    });
   
     React.useEffect(() => {
       if ($autoPlay) {
@@ -74,9 +59,7 @@ export const Carousel: React.FC<CarouselProps> = ({
       <CarouselContainer $height={$height} $width={$width} $dots={$dots}>
          <SlidesWrapper 
            $currentslide={$currentslide}
-           onTouchStart={handleTouchStart}
-           onTouchMove={handleTouchMove}
-           onTouchEnd={handleTouchEnd}
+           {...handlers}
          >
           {$slides.map((slide, index) => (
             <SlideContainer
@@ -92,7 +75,7 @@ export const Carousel: React.FC<CarouselProps> = ({
   
         <NavigationButton 
           $position="left" 
-          onClick={nextSlide}
+          onClick={prevSlide}
           $isActive={$currentslide === 1}
         >
           <ChevronLeft size={24} />
@@ -100,7 +83,7 @@ export const Carousel: React.FC<CarouselProps> = ({
         
         <NavigationButton 
           $position="right" 
-          onClick={prevSlide}
+          onClick={nextSlide}
           $isActive={$currentslide === 0}
         >
           <ChevronRight size={24} />

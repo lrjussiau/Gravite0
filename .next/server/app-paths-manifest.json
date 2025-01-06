@@ -1,4 +1,27 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js"
+  "/api/flights/create/route": "app/api/flights/create/route.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/flights/delete/[id]/route": "app/api/flights/delete/[id]/route.js",
+  "/api/flights/retrieve/all/route": "app/api/flights/retrieve/all/route.js",
+  "/api/pilots/[pilotId]/unavailability/route": "app/api/pilots/[pilotId]/unavailability/route.js",
+  "/api/flights/select_pilot/route": "app/api/flights/select_pilot/route.js",
+  "/api/flights/update/[id]/route": "app/api/flights/update/[id]/route.js",
+  "/api/pilots/available_per_slot/route": "app/api/pilots/available_per_slot/route.js",
+  "/api/pilots/availability/route": "app/api/pilots/availability/route.js",
+  "/api/pilots/unavailability/route": "app/api/pilots/unavailability/route.js",
+  "/api/pilots/route": "app/api/pilots/route.js",
+  "/api/pilots/unavailability/[id]/route": "app/api/pilots/unavailability/[id]/route.js",
+  "/api/users/route": "app/api/users/route.js",
+  "/api/users/[id]/route": "app/api/users/[id]/route.js",
+  "/login/page": "app/login/page.js",
+  "/calendar/page": "app/calendar/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/logout/page": "app/logout/page.js",
+  "/page": "app/page.js",
+  "/backoffice/availability/page": "app/backoffice/availability/page.js",
+  "/backoffice/users/page": "app/backoffice/users/page.js",
+  "/api/flights/pilot_schedule/route": "app/api/flights/pilot_schedule/route.js",
+  "/backoffice/pending/page": "app/backoffice/pending/page.js",
+  "/backoffice/page": "app/backoffice/page.js"
 }

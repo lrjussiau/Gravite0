@@ -2,7 +2,7 @@ import { ImageContainer, ImageBackground, TopTitleContainer, BottomTextContainer
 import { useTranslation } from "react-i18next";
 import ScrollDownButton from "components/ScrollDownButton";
 import Image from 'next/image';
-import { Title, SubTitle, Text } from 'components/shared/Typography';
+import { Title, Text } from 'components/shared/Typography';
 import { PageContainer, ContentContainer, BoxContainer } from 'components/shared/Container';
 import { ResponsiveText } from "components/shared/ResponsiveText";
 import { HorizontalLine } from "components/shared/Line/Line.styled";

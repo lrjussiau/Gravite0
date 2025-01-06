@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { colors } from 'styles/color';
-import { BREAKPOINTS } from 'utils/DeviceDetect';
 
 export const MapWrapper = styled.div`
     width: 100%;
